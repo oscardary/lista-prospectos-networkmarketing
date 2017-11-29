@@ -104,7 +104,7 @@ export class HomePage {
         
       },
       {
-        'title': 'Pinta Cuadros',
+        'title': 'Pinte Cuadros',
         'icon': 'color-palette',
         'description': 'Sepa Pintar Cuadros',
         

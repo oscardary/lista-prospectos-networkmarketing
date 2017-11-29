@@ -11,13 +11,15 @@
 
 <ion-grid>
   <ion-row>
-    <ion-col col-12>
+    <ion-col>
     	
 		<ion-list>
 		      <ion-item>
 		        <ion-label>Nombre</ion-label>
 		        <ion-select [(ngModel)]="nombres.nombre" interface="popover">
-			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">{{nombre.nombre}}</ion-option>
+			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">
+			    	{{nombre.nombre}}
+			    </ion-option>
 			    	
 				</ion-select>
 		      </ion-item>
@@ -27,14 +29,16 @@
 
     </ion-col>
   </ion-row>
+
   <ion-row>
-    <ion-col col-12>
+    <ion-col>
 
 		<ion-list>
 		      <ion-item>
 		        <ion-label>Apellido</ion-label>
 		        <ion-select [(ngModel)]="apellidos.apellido" interface="popover">
-			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}</ion-option>
+			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}
+			    	</ion-option>
 			    	
 				</ion-select>
 		      </ion-item>
@@ -43,6 +47,24 @@
 
     </ion-col>
   </ion-row>
+
+
+<ion-row>
+    <ion-col>
+		<ion-list>
+		      <ion-item>
+		        <ion-label>Profesion</ion-label>
+		        <ion-select [(ngModel)]="profesiones.profesion" interface="popover">
+				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}
+				   	</ion-option>
+			    </ion-select>
+		      </ion-item>
+		 </ion-list>
+    </ion-col>
+  </ion-row>
+
+
+
 </ion-grid>
 
 

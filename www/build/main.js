@@ -63,7 +63,7 @@ var TabsPage = (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"G:\Ionic2\lista-prospectos\src\pages\tabs\tabs.html"*/'<ion-tabs color="primary">\n  <ion-tab [root]="tab1Root" tabTitle="Profesiones" tabIcon="man"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Crear" tabIcon="add-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Lista" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"G:\Ionic2\lista-prospectos\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\tabs\tabs.html"*/'<ion-tabs color="primary">\n\n  <ion-tab [root]="tab1Root" tabTitle="Profesiones" tabIcon="man"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Crear" tabIcon="add-circle"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Lista" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -103,6 +103,7 @@ var AboutPage = (function () {
         this.navCtrl = navCtrl;
         this.nombres = [];
         this.apellidos = [];
+        this.profesiones = [];
         this.nombres = [
             {
                 'nombre': 'Armando',
@@ -263,9 +264,6 @@ var AboutPage = (function () {
                 'apellido': 'Montoya',
             },
             {
-                'apellido': 'García',
-            },
-            {
                 'apellido': 'López',
             },
             {
@@ -323,15 +321,248 @@ var AboutPage = (function () {
                 'apellido': 'Valencia',
             },
         ];
+        this.profesiones = [
+            {
+                'profesion': 'Maneja Uber',
+                'icon': 'car',
+                'description': 'Alguien que sepas que maneje Uber, o tenga algo que ver con Uber',
+            },
+            {
+                'profesion': 'Analiza Datos',
+                'icon': 'analytics',
+                'description': 'Analice Datos en una Empresa',
+            },
+            {
+                'profesion': 'Disfruta Picnic',
+                'icon': 'basket',
+                'description': 'Alguien que recuerdes en un picnic',
+            },
+            {
+                'profesion': 'Toma Cerveza',
+                'icon': 'beer',
+                'description': 'Alguien que recuerdes tomando mucha cerveza',
+            },
+            {
+                'profesion': 'Monta Bicicleta',
+                'icon': 'bicycle',
+                'description': 'Vaya a la ciclovia o monte mucho e bicicleta',
+            },
+            {
+                'profesion': 'Lee Libros',
+                'icon': 'book',
+                'description': 'Alguien a quien le guste leer mucho',
+            },
+            {
+                'profesion': 'Maquilladora Profesional',
+                'icon': 'brush',
+                'description': 'Le Guste maquillar por profesion o hobby',
+            },
+            {
+                'profesion': 'Sabe Mecanica',
+                'icon': 'build',
+                'description': 'Que sepa mecanica, tenga taller o con familiar mecanico',
+            },
+            {
+                'profesion': 'Monta Bus',
+                'icon': 'bus',
+                'description': 'Que lo recuerdes montado en un bus',
+            },
+            {
+                'profesion': 'Toma Tinto',
+                'icon': 'cafe',
+                'description': 'Alguien que le guste mucho el tinto',
+            },
+            {
+                'profesion': 'Call Center',
+                'icon': 'call',
+                'description': 'Trabaje en un Call Center o reciba muchas llamadas',
+            },
+            {
+                'profesion': 'Sabe Fotografía',
+                'icon': 'camera',
+                'description': 'Sepa de Fotografia, sea profesional tomando fotos',
+            },
+            {
+                'profesion': 'Super Mercado',
+                'icon': 'cart',
+                'description': 'Trabaje para un SuperMercado en cualquier area',
+            },
+            {
+                'profesion': 'Trabaja Valores',
+                'icon': 'cash',
+                'description': 'Tenga o Trabaje en Casa de Cambio',
+            },
+            {
+                'profesion': 'Pinta Cuadros',
+                'icon': 'color-palette',
+                'description': 'Sepa Pintar Cuadros',
+            },
+            {
+                'profesion': 'Obras Construccion',
+                'icon': 'construct',
+                'description': 'Trabe en Obras de Construcción',
+            },
+            {
+                'profesion': 'Peluquera Estilista',
+                'icon': 'cut',
+                'description': 'Tenga o Trabaje en peluquería',
+            },
+            {
+                'profesion': 'Optómetra Optica',
+                'icon': 'eye',
+                'description': 'Trabaje con los ojos con gafas y más',
+            },
+            {
+                'profesion': 'Community Manager',
+                'icon': 'logo-facebook',
+                'description': 'Maneje Redes Sociales como profesión',
+            },
+            {
+                'profesion': 'Bombero Socorrista',
+                'icon': 'flame',
+                'description': 'Sepa Pintar Cuadros',
+            },
+            {
+                'profesion': 'Ingenieria Electrica',
+                'icon': 'flash',
+                'description': 'Sepa de Voltajes y cosas electricas',
+            },
+            {
+                'profesion': 'Químico Laboratorio',
+                'icon': 'flask',
+                'description': 'Sea Quimico de algun tipo',
+            },
+            {
+                'profesion': 'Jardinería Plantas',
+                'icon': 'flower',
+                'description': 'Venda plantas o flores para vivir, sea Jardinero',
+            },
+            {
+                'profesion': 'Futbol Microfutbol',
+                'icon': 'football',
+                'description': 'Sepa mucho de Futbol, le guste jugar futbol, juega microfutbol',
+            },
+            {
+                'profesion': 'Madera Carpintero',
+                'icon': 'hammer',
+                'description': 'Trabaje con Madera',
+            },
+            {
+                'profesion': 'Futbol Microfutbol',
+                'icon': 'football',
+                'description': 'Sepa mucho de Futbol, le guste jugar futbol, juega microfutbol',
+            },
+            {
+                'profesion': 'Amor Pasado',
+                'icon': 'heart',
+                'description': 'Algun Exnovio(a) o amor del pasado',
+            },
+            {
+                'profesion': 'Bienes Raices',
+                'icon': 'home',
+                'description': 'Trabaje comprando o vendiendo bienes raices',
+            },
+            {
+                'profesion': 'Llaves Cerraduras',
+                'icon': 'key',
+                'description': 'Trabaje con Cerraduras y Llaves',
+            },
+            {
+                'profesion': 'Tecnología Sistemas',
+                'icon': 'laptop',
+                'description': 'Sabe de sistemas y tecnología, programacion, software',
+            },
+            {
+                'profesion': 'Soldado Militar',
+                'icon': 'medal',
+                'description': 'Alguien que haya o este en el ejercito',
+            },
+            {
+                'profesion': 'Medico Especialista',
+                'icon': 'medkit',
+                'description': 'Tiene alguna especialidad en medicina o simplemente es médico',
+            },
+            {
+                'profesion': 'Cantante Musico',
+                'icon': 'microphone',
+                'description': 'Hayas visto cantar en algun lado',
+            },
+            {
+                'profesion': 'Toca Instrumentos',
+                'icon': 'musical-notes',
+                'description': 'Toca algun instrumento y sabe de musica',
+            },
+            {
+                'profesion': 'Vegetariano Verduras',
+                'icon': 'nutrition',
+                'description': 'Es vegetariano, Vegano o solo come verduras',
+            },
+            {
+                'profesion': 'Ayuda Mascotas',
+                'icon': 'paw',
+                'description': 'Cuida los animalitos o tiene muchas mascotas',
+            },
+            {
+                'profesion': 'Vende Celulares',
+                'icon': 'phone-portrait',
+                'description': 'Vende Celulares, Accesorios o todo con telefonos inteligentes',
+            },
+            {
+                'profesion': 'Pizzero Pizzeria',
+                'icon': 'pizza',
+                'description': 'Tiene que ver con la industria de la pizza',
+            },
+            {
+                'profesion': 'Azafata Piloto',
+                'icon': 'plane',
+                'description': 'Tiene que ver con la industria de la aviacion',
+            },
+            {
+                'profesion': 'Vende Ropa',
+                'icon': 'pricetags',
+                'description': 'Vende Ropa en General',
+            },
+            {
+                'profesion': 'Mesero Restaurante',
+                'icon': 'restaurant',
+                'description': 'Trabaja en un restaurante o es dueño de alguno',
+            },
+            {
+                'profesion': 'Recien Graduado',
+                'icon': 'school',
+                'description': 'Está Estudiando o Recién Graduado de la Universidad',
+            },
+            {
+                'profesion': 'Costura Confeccion',
+                'icon': 'shirt',
+                'description': 'Confecciona o tiene taller de costura',
+            },
+            {
+                'profesion': 'Carro Velocidad',
+                'icon': 'speedometer',
+                'description': 'Piloto de Autos o le guste la Velocidad y los Carros',
+            },
+            {
+                'profesion': 'Deportista Rendimiento',
+                'icon': 'tennisball',
+                'description': 'Deportista de Alto Rendimiento',
+            },
+            {
+                'profesion': 'Youtuber Animador',
+                'icon': 'logo-youtube',
+                'description': 'Youtuber o Animador en Videos en Redes Sociales',
+            },
+        ];
     }
     ;
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"G:\Ionic2\lista-prospectos\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Crear\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n<ion-grid>\n  <ion-row>\n    <ion-col col-12>\n    	\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Nombre</ion-label>\n		        <ion-select [(ngModel)]="nombres.nombre" interface="popover">\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">{{nombre.nombre}}</ion-option>\n			    	\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n\n    </ion-col>\n  </ion-row>\n  <ion-row>\n    <ion-col col-12>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Apellido</ion-label>\n		        <ion-select [(ngModel)]="apellidos.apellido" interface="popover">\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}</ion-option>\n			    	\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n    </ion-col>\n  </ion-row>\n</ion-grid>\n\n\n\n\n\n\n\n\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="celular"  \n         (keyup.enter)="addcelular($event.target.value)">\n    \n	</ion-input> \n	<br><br><br>\n\n   <button ion-button color="primary" full>Agregar a la Lista</button>\n\n    \n\n</ion-content>\n'/*ion-inline-end:"G:\Ionic2\lista-prospectos\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Crear\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n    	\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Nombre</ion-label>\n\n		        <ion-select [(ngModel)]="nombres.nombre" interface="popover">\n\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n\n			    	{{nombre.nombre}}\n\n			    </ion-option>\n\n			    	\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Apellido</ion-label>\n\n		        <ion-select [(ngModel)]="apellidos.apellido" interface="popover">\n\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n\n			    	</ion-option>\n\n			    	\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n<ion-row>\n\n    <ion-col>\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Profesion</ion-label>\n\n		        <ion-select [(ngModel)]="profesiones.profesion" interface="popover">\n\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n\n				   	</ion-option>\n\n			    </ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n\n\n</ion-grid>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="celular"  \n\n         (keyup.enter)="addcelular($event.target.value)">\n\n    \n\n	</ion-input> \n\n	<br><br><br>\n\n\n\n   <button ion-button color="primary" full>Agregar a la Lista</button>\n\n\n\n    \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\about\about.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
     ], AboutPage);
     return AboutPage;
+    var _a;
 }());
 
 //# sourceMappingURL=about.js.map
@@ -362,7 +593,7 @@ var ContactPage = (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"G:\Ionic2\lista-prospectos\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Lista\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  \n</ion-content>\n'/*ion-inline-end:"G:\Ionic2\lista-prospectos\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Lista\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\contact\contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], ContactPage);
@@ -467,7 +698,7 @@ var HomePage = (function () {
                 'description': 'Tenga o Trabaje en Casa de Cambio',
             },
             {
-                'title': 'Pinta Cuadros',
+                'title': 'Pinte Cuadros',
                 'icon': 'color-palette',
                 'description': 'Sepa Pintar Cuadros',
             },
@@ -630,7 +861,7 @@ var HomePage = (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"G:\Ionic2\lista-prospectos\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Posibles Prospectos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n\n\n\n\n<ion-content>\n  <ion-list>\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n    <button ion-item *ngFor="let item of items" icon-start>\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{ item.title }}\n    </button>\n  </ion-list>\n</ion-content>\n\n'/*ion-inline-end:"G:\Ionic2\lista-prospectos\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>Posibles Prospectos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n\n    <button ion-item *ngFor="let item of items" icon-start>\n\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n\n      {{ item.title }}\n\n    </button>\n\n  </ion-list>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], HomePage);
@@ -775,7 +1006,7 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"G:\Ionic2\lista-prospectos\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"G:\Ionic2\lista-prospectos\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
