@@ -17,7 +17,12 @@ export class AboutPage {
 
 
 
-
+  nuevoProspecto = {
+    nombre: '',
+    apellido: '',
+    profesion: '',
+    telefono:'',
+  }
 
 	//items: Observable<any[]>;
 	//nombre: any;
@@ -540,14 +545,12 @@ export class AboutPage {
 
   	};
 
-  	//Despues del constructor
+  /* agregarProspecto(nuevoProspecto){
+      nuevoProspecto.nombre =this.nombres.nombre;
+      nuevoProspecto.apellido =this.apellidos.apellido;
+      nuevoProspecto.profesion =this.profesiones.profesion;
 
-	//addItem(desc: string) {
-	//this.items.push({ message: desc});
-	//this.mensajeValor = '';
-	//console.log(desc);
-	//	}
-
+    };*/
 
 }
 
