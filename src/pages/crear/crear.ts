@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ListaPage } from '../lista/lista'
 //import { AngularFireDatabase } from 'angularfire2/database';
 //import { Observable } from 'rxjs/Observable';
 
@@ -551,6 +552,11 @@ export class CrearPage {
       nuevoProspecto.profesion =this.profesiones.profesion;
 
     };*/
+
+
+    irAlistaPage(nuevoProspecto) {
+    this.navCtrl.push(ListaPage, nuevoProspecto);
+}
 
 }
 
