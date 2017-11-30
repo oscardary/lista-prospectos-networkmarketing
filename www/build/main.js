@@ -40,9 +40,9 @@ webpackEmptyAsyncContext.id = 186;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__crear_crear__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_lista__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profesiones_profesiones__ = __webpack_require__(233);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,9 +58,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var TabsPage = (function () {
     function TabsPage() {
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__about_about__["a" /* AboutPage */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__profesiones_profesiones__["a" /* ProfesionesPage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__crear_crear__["a" /* CrearPage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__lista_lista__["a" /* ListaPage */];
     }
     TabsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\tabs\tabs.html"*/'<ion-tabs color="primary">\n\n  <ion-tab [root]="tab1Root" tabTitle="Profesiones" tabIcon="man"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Crear" tabIcon="add-circle"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Lista" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\tabs\tabs.html"*/
@@ -78,7 +78,7 @@ var TabsPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrearPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -94,16 +94,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 //import { AngularFireDatabase } from 'angularfire2/database';
 //import { Observable } from 'rxjs/Observable';
-var AboutPage = (function () {
+var CrearPage = (function () {
     //items: Observable<any[]>;
     //nombre: any;
     //mensajeValor: string = '';
-    function AboutPage(navCtrl) {
-        //this.items = db.list('/clasificados').valueChanges();
+    function CrearPage(navCtrl) {
+        //this.items = db.list('/lista').valueChanges();
         this.navCtrl = navCtrl;
         this.nombres = [];
         this.apellidos = [];
         this.profesiones = [];
+        this.nuevoProspecto = {
+            nombre: '',
+            apellido: '',
+            profesion: '',
+            telefono: '',
+        };
         this.nombres = [
             {
                 'nombre': 'Armando',
@@ -555,16 +561,17 @@ var AboutPage = (function () {
         ];
     }
     ;
-    AboutPage = __decorate([
+    CrearPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Crear\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n    	\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Nombre</ion-label>\n\n		        <ion-select [(ngModel)]="nombres.nombre" interface="popover">\n\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n\n			    	{{nombre.nombre}}\n\n			    </ion-option>\n\n			    	\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Apellido</ion-label>\n\n		        <ion-select [(ngModel)]="apellidos.apellido" interface="popover">\n\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n\n			    	</ion-option>\n\n			    	\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n<ion-row>\n\n    <ion-col>\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Profesion</ion-label>\n\n		        <ion-select [(ngModel)]="profesiones.profesion" interface="popover">\n\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n\n				   	</ion-option>\n\n			    </ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n\n\n</ion-grid>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="celular"  \n\n         (keyup.enter)="addcelular($event.target.value)">\n\n    \n\n	</ion-input> \n\n	<br><br><br>\n\n\n\n   <button ion-button color="primary" full >Agregar a la Lista</button>\n\n\n\n    \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\about\about.html"*/
+            selector: 'page-crear',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Crear\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n    	\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Nombre</ion-label>\n\n		        <ion-select [(ngModel)]="nombres.nombre" interface="popover">\n\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n\n			    	{{nombre.nombre}}\n\n			    </ion-option>\n\n			    	\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Apellido</ion-label>\n\n		        <ion-select [(ngModel)]="apellidos.apellido" interface="popover">\n\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n\n			    	</ion-option>\n\n			    	\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n<ion-row>\n\n    <ion-col>\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Profesion</ion-label>\n\n		        <ion-select [(ngModel)]="profesiones.profesion" interface="popover">\n\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n\n				   	</ion-option>\n\n			    </ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n\n\n</ion-grid>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="celular"  \n\n         (keyup.enter)="addcelular($event.target.value)">\n\n    \n\n	</ion-input> \n\n	<br><br><br>\n\n\n\n   <button ion-button color="primary" full >Agregar a la Lista</button>\n\n\n\n    \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-    ], AboutPage);
-    return AboutPage;
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
+    ], CrearPage);
+    return CrearPage;
+    var _a;
 }());
 
-//# sourceMappingURL=about.js.map
+//# sourceMappingURL=crear.js.map
 
 /***/ }),
 
@@ -572,7 +579,7 @@ var AboutPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -586,20 +593,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ContactPage = (function () {
-    function ContactPage(navCtrl) {
+var ListaPage = (function () {
+    function ListaPage(navCtrl) {
         this.navCtrl = navCtrl;
     }
-    ContactPage = __decorate([
+    ListaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Lista\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="cards-bg social-cards">\n\n  <ion-list>\n\n  	\n\n\n\n    <ion-item-divider color="light">Prospectos</ion-item-divider>\n\n    \n\n    <ion-card>\n\n    		<ion-card-content>\n\n    			<ion-row>\n\n    				<ion-col col-1>\n\n    				<ion-icon name="person" item-start></ion-icon>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>Carlos Alberto</p>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>Hernandez</p>\n\n    				</ion-col>\n\n    				<ion-col col-1>\n\n    				</ion-col>\n\n 				</ion-row>\n\n 				<ion-row>\n\n 					<ion-col col-1>\n\n    				<ion-icon name="car" item-start></ion-icon>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>Maneja Uber</p>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>3009876543</p>\n\n    				</ion-col>\n\n    				<ion-col col-1>\n\n    				</ion-col>\n\n 				</ion-row>\n\n    			\n\n  			</ion-card-content>\n\n\n\n    </ion-card>\n\n   \n\n   \n\n\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\contact\contact.html"*/
+            selector: 'page-lista',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\lista\lista.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Lista\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="cards-bg social-cards">\n\n  <ion-list>\n\n  	\n\n\n\n    <ion-item-divider color="light">Prospectos</ion-item-divider>\n\n    \n\n    <ion-card>\n\n    		<ion-card-content>\n\n    			<ion-row>\n\n    				<ion-col col-1>\n\n    				<ion-icon name="person" item-start></ion-icon>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>Carlos Alberto</p>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>Hernandez</p>\n\n    				</ion-col>\n\n    				<ion-col col-1>\n\n    				</ion-col>\n\n 				</ion-row>\n\n 				<ion-row>\n\n 					<ion-col col-1>\n\n    				<ion-icon name="car" item-start></ion-icon>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>Maneja Uber</p>\n\n    				</ion-col>\n\n    				<ion-col col-5>\n\n    					<p>3009876543</p>\n\n    				</ion-col>\n\n    				<ion-col col-1>\n\n    				</ion-col>\n\n 				</ion-row>\n\n    			\n\n  			</ion-card-content>\n\n\n\n    </ion-card>\n\n   \n\n   \n\n\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\lista\lista.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-    ], ContactPage);
-    return ContactPage;
+    ], ListaPage);
+    return ListaPage;
 }());
 
-//# sourceMappingURL=contact.js.map
+//# sourceMappingURL=lista.js.map
 
 /***/ }),
 
@@ -607,7 +614,7 @@ var ContactPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfesionesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -621,8 +628,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var HomePage = (function () {
-    function HomePage(navCtrl) {
+var ProfesionesPage = (function () {
+    function ProfesionesPage(navCtrl) {
         this.navCtrl = navCtrl;
         this.items = [];
         this.items = [
@@ -858,16 +865,16 @@ var HomePage = (function () {
             },
         ];
     }
-    HomePage = __decorate([
+    ProfesionesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>Posibles Prospectos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n\n    <button ion-item *ngFor="let item of items" icon-start>\n\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n\n      {{ item.title }}\n\n    </button>\n\n  </ion-list>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\home\home.html"*/
+            selector: 'page-profesiones',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\profesiones\profesiones.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>Profesiones</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n\n    <button ion-item *ngFor="let item of items" icon-start>\n\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n\n      {{ item.title }}\n\n    </button>\n\n  </ion-list>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\profesiones\profesiones.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-    ], HomePage);
-    return HomePage;
+    ], ProfesionesPage);
+    return ProfesionesPage;
 }());
 
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=profesiones.js.map
 
 /***/ }),
 
@@ -894,9 +901,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_crear_crear__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_lista_lista__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_profesiones_profesiones__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(229);
@@ -933,9 +940,9 @@ var AppModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_4__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_crear_crear__["a" /* CrearPage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_lista_lista__["a" /* ListaPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_profesiones_profesiones__["a" /* ProfesionesPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */]
             ],
             imports: [
@@ -944,16 +951,16 @@ var AppModule = (function () {
                     links: []
                 }),
                 __WEBPACK_IMPORTED_MODULE_14__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_10_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_11__enviroment__["a" /* firebaseConfig */], 'clasificados-app'),
+                __WEBPACK_IMPORTED_MODULE_10_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_11__enviroment__["a" /* firebaseConfig */], 'lista-prospectos'),
                 __WEBPACK_IMPORTED_MODULE_12_angularfire2_auth__["a" /* AngularFireAuthModule */],
                 __WEBPACK_IMPORTED_MODULE_13_angularfire2_database__["a" /* AngularFireDatabaseModule */],
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_4__pages_about_about__["a" /* AboutPage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__["a" /* ContactPage */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_crear_crear__["a" /* CrearPage */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_lista_lista__["a" /* ListaPage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_profesiones_profesiones__["a" /* ProfesionesPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */]
             ],
             providers: [
@@ -1022,12 +1029,12 @@ var MyApp = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return firebaseConfig; });
 var firebaseConfig = {
-    apiKey: "AIzaSyDyUbLFdz6GG1dwbI8XwI2iUJ4wUd_EYD0",
-    authDomain: "clasificados-app.firebaseapp.com",
-    databaseURL: "https://clasificados-app.firebaseio.com",
-    projectId: "clasificados-app",
-    storageBucket: "clasificados-app.appspot.com",
-    messagingSenderId: "946564932919"
+    apiKey: "AIzaSyB4C6vu6f1sVh8VfoqBJc2Cr0SOsKXwhXo",
+    authDomain: "lista-prospectos.firebaseapp.com",
+    databaseURL: "https://lista-prospectos.firebaseio.com",
+    projectId: "lista-prospectos",
+    storageBucket: "",
+    messagingSenderId: "879756516909"
 };
 //# sourceMappingURL=enviroment.js.map
 

@@ -1,11 +1,11 @@
 export const firebaseConfig = {
 	
 
-	apiKey: "AIzaSyDyUbLFdz6GG1dwbI8XwI2iUJ4wUd_EYD0",
-    authDomain: "clasificados-app.firebaseapp.com",
-    databaseURL: "https://clasificados-app.firebaseio.com",
-    projectId: "clasificados-app",
-    storageBucket: "clasificados-app.appspot.com",
-    messagingSenderId: "946564932919"
+	 apiKey: "AIzaSyB4C6vu6f1sVh8VfoqBJc2Cr0SOsKXwhXo",
+    authDomain: "lista-prospectos.firebaseapp.com",
+    databaseURL: "https://lista-prospectos.firebaseio.com",
+    projectId: "lista-prospectos",
+    storageBucket: "",
+    messagingSenderId: "879756516909"
 
 }
