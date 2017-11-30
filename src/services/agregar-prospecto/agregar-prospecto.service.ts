@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database'
+//import { AngularFireDatabase } from 'angularfire2/database'
 
-import { CrearPage } from '../../pages/crear/crear';
+//import { CrearPage } from '../../pages/crear/crear';
 
 
 @Injectable()
@@ -9,9 +9,10 @@ import { CrearPage } from '../../pages/crear/crear';
 export class AgregarProspectoService {
 
 
-	private agregarProspectoRef = this.db.list('agregar-prospecto')
+	//private agregarProspectoRef = this.db.list('agregar-prospecto')
 	
-	constructor(private db:AngularFireDatabase) {
+	constructor(//private db:AngularFireDatabase
+		) {
 		// code...
 	}
 }
