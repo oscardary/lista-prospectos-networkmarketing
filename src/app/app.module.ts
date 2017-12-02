@@ -18,7 +18,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import {HttpModule} from '@angular/http'
-
+import {AgregarProspectoService} from '../services/agregar-prospecto/agregar-prospecto.service';
 
 
 @NgModule({
@@ -48,7 +48,8 @@ import {HttpModule} from '@angular/http'
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AgregarProspectoService,
   ]
 })
 export class AppModule {}

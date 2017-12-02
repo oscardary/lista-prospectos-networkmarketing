@@ -12,15 +12,15 @@
 <ion-grid>
   <ion-row>
     <ion-col>
-    	
+
 		<ion-list>
 		      <ion-item>
 		        <ion-label>Nombre</ion-label>
-		        <ion-select [(ngModel)]="nombres.nombre" interface="popover">
+		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">
 			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">
 			    	{{nombre.nombre}}
 			    </ion-option>
-			    	
+
 				</ion-select>
 		      </ion-item>
 		 </ion-list>
@@ -36,10 +36,10 @@
 		<ion-list>
 		      <ion-item>
 		        <ion-label>Apellido</ion-label>
-		        <ion-select [(ngModel)]="apellidos.apellido" interface="popover">
+		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">
 			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}
 			    	</ion-option>
-			    	
+
 				</ion-select>
 		      </ion-item>
 		 </ion-list>
@@ -54,7 +54,7 @@
 		<ion-list>
 		      <ion-item>
 		        <ion-label>Profesion</ion-label>
-		        <ion-select [(ngModel)]="profesiones.profesion" interface="popover">
+		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">
 				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}
 				   	</ion-option>
 			    </ion-select>
@@ -64,25 +64,13 @@
   </ion-row>
 
 
-
 </ion-grid>
 
-
-
-
-
-
-
-
-
-	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="celular"  
-         (keyup.enter)="addcelular($event.target.value)">
-    
-	</ion-input> 
+	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">
+        <!-- (keyup.enter)="addcelular($event.target.value)" -->
+	</ion-input>
 	<br><br><br>
 
    <button ion-button color="primary" full (click)="irAListaPage(nuevoProspecto)" >Agregar a la Lista</button>
-
-    
 
 </ion-content>

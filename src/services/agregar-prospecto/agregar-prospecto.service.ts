@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-//import { AngularFireDatabase } from 'angularfire2/database'
+import { AngularFireDatabase } from 'angularfire2/database'
 
 //import { CrearPage } from '../../pages/crear/crear';
 
@@ -7,12 +7,19 @@ import { Injectable } from '@angular/core';
 @Injectable()
 
 export class AgregarProspectoService {
+    //Validar tipos de datos con el item.module.ts
+    private apListRef = this.afd.list('usuarios/mauroarangoc');
 
-
-	//private agregarProspectoRef = this.db.list('agregar-prospecto')
-	
-	constructor(//private db:AngularFireDatabase
-		) {
+    constructor(
+        private afd:AngularFireDatabase ) {
 		// code...
 	}
+
+    getContactList () {
+        return this.apListRef;
+    }
+
+    addContactToList (nuevoProspecto) {
+        return this.apListRef.push(nuevoProspecto);
+    }
 }

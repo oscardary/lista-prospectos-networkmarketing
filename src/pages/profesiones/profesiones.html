@@ -6,14 +6,12 @@
 
 
 
-
-
-
-
 <ion-content>
+  <br>
   <ion-list>
   	<ion-list-header>¿A quien conoces que?</ion-list-header>
-    <button ion-item *ngFor="let item of items" icon-start>
+    <button ion-item *ngFor="let item of items" icon-start
+      (click)=irACrearPage(item) >
       <ion-icon [name]="item.icon" item-start></ion-icon>
       {{ item.title }}
     </button>
