@@ -5,7 +5,7 @@ import { AngularFireDatabase } from 'angularfire2/database'
 
 export class AgregarProspectoService {
     //Validar tipos de datos con el item.module.ts
-    private apListRef = this.afd.list('usuarios/mauroarangoc');
+    private apListRef = this.afd.list('personas');
 
     constructor(
         private afd:AngularFireDatabase ) {

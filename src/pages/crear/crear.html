@@ -3,6 +3,13 @@
     <ion-title>
       Crear
     </ion-title>
+
+		<ion-buttons end>
+      	<button ion-button icon-only (click)="fnCerrarSesion()">
+        		<ion-icon name="exit"></ion-icon>
+      	</button>
+    	</ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
@@ -71,7 +78,8 @@
 	</ion-input>
 	<br><br><br>
 
-   <button ion-button color="primary" full (click)="irAListaPage(nuevoProspecto)" >Agregar a la Lista</button>
-   <button ion-button block (click)="fnCerrarSesion()">Cerrar Sesión</button>
+   <button ion-button color="secondary" full (click)="irAListaPage(nuevoProspecto)" >Agregar a la Lista</button>
+
+  
 
 </ion-content>
