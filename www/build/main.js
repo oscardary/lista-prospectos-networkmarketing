@@ -602,7 +602,7 @@ var AgregarProspectoService = (function () {
     function AgregarProspectoService(afd) {
         this.afd = afd;
         //Validar tipos de datos con el item.module.ts
-        this.apListRef = this.afd.list('usuarios/mauroarangoc');
+        this.apListRef = this.afd.list('personas');
         // code...
     }
     AgregarProspectoService.prototype.getContactList = function () {
@@ -613,9 +613,10 @@ var AgregarProspectoService = (function () {
     };
     AgregarProspectoService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object])
     ], AgregarProspectoService);
     return AgregarProspectoService;
+    var _a;
 }());
 
 //# sourceMappingURL=agregar-prospecto.service.js.map
