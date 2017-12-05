@@ -43,131 +43,605 @@ var CrearPage = (function () {
         this.nuevoProspecto = {};
         this.nombres = [
             {
-                'nombre': 'Armando',
+                "nombre": "Adel"
             },
             {
-                'nombre': 'José',
+                "nombre": "Adriana"
             },
             {
-                'nombre': 'Luis',
+                "nombre": "Agustin"
             },
             {
-                'nombre': 'Carlos',
+                "nombre": "Alejandra"
             },
             {
-                'nombre': 'Juan',
+                "nombre": "Alejandro"
             },
             {
-                'nombre': 'Jorge',
+                "nombre": "Alex"
             },
             {
-                'nombre': 'Pedro',
+                "nombre": "Alexander"
             },
             {
-                'nombre': 'Jesús',
+                "nombre": "Alexandra"
             },
             {
-                'nombre': 'Manuel',
+                "nombre": "Alfredo"
             },
             {
-                'nombre': 'Oscar',
+                "nombre": "Alirio"
             },
             {
-                'nombre': 'Miguel',
+                "nombre": "Alvaro"
             },
             {
-                'nombre': 'Mauricio',
+                "nombre": "Amparo"
             },
             {
-                'nombre': 'Juan Carlos',
+                "nombre": "Ana"
             },
             {
-                'nombre': 'Luis Alberto',
+                "nombre": "Ana Maria"
             },
             {
-                'nombre': 'Carlos Alberto',
+                "nombre": "Anderson"
             },
             {
-                'nombre': 'Luis Eduardo',
+                "nombre": "Andrea"
             },
             {
-                'nombre': 'Luis Fernando',
+                "nombre": "Andrés"
             },
             {
-                'nombre': 'Julio Cesar',
+                "nombre": "Andrés Felipe"
             },
             {
-                'nombre': 'Miguel Angel',
+                "nombre": "Angela"
             },
             {
-                'nombre': 'Luis Carlos',
+                "nombre": "Angela Maria"
             },
             {
-                'nombre': 'Jose Antonio',
+                "nombre": "Angelica"
             },
             {
-                'nombre': 'Carlos Arturo',
+                "nombre": "Antonio"
             },
             {
-                'nombre': 'Santiago',
+                "nombre": "Armando"
             },
             {
-                'nombre': 'Sebastian',
+                "nombre": "Augusto"
             },
             {
-                'nombre': 'Alejandro',
+                "nombre": "Beatriz"
             },
             {
-                'nombre': 'Nicolás',
+                "nombre": "Bryan"
             },
             {
-                'nombre': 'Samuel',
+                "nombre": "Camila"
             },
             {
-                'nombre': 'Daniel',
+                "nombre": "Camilo"
             },
             {
-                'nombre': 'Mateo',
+                "nombre": "Carlos"
             },
             {
-                'nombre': 'Alexander',
+                "nombre": "Carlos Andres"
             },
             {
-                'nombre': 'Esteban',
+                "nombre": "Carlos Alberto"
             },
             {
-                'nombre': 'David',
+                "nombre": "Carlos Arturo"
             },
             {
-                'nombre': 'Simon',
+                "nombre": "Carolina"
             },
             {
-                'nombre': 'Tomas',
+                "nombre": "Catalina"
             },
             {
-                'nombre': 'Felipe',
+                "nombre": "Cesar"
             },
             {
-                'nombre': 'Andrés Felipe',
+                "nombre": "Christian"
             },
             {
-                'nombre': 'Andrés',
+                "nombre": "Clara"
             },
             {
-                'nombre': 'Juan Pablo',
+                "nombre": "Claudia"
             },
             {
-                'nombre': 'Juan Esteban',
+                "nombre": "Clemente"
             },
             {
-                'nombre': 'Camilo',
+                "nombre": "Daniel"
             },
             {
-                'nombre': 'Juan Camilo',
+                "nombre": "Daniela"
             },
             {
-                'nombre': 'Juan Diego',
+                "nombre": "Dario"
             },
+            {
+                "nombre": "David"
+            },
+            {
+                "nombre": "Diana"
+            },
+            {
+                "nombre": "Didier"
+            },
+            {
+                "nombre": "Diego"
+            },
+            {
+                "nombre": "Duvan"
+            },
+            {
+                "nombre": "Edilma"
+            },
+            {
+                "nombre": "Edison"
+            },
+            {
+                "nombre": "Eduardo"
+            },
+            {
+                "nombre": "Edwin"
+            },
+            {
+                "nombre": "Eliza"
+            },
+            {
+                "nombre": "Elizabeth"
+            },
+            {
+                "nombre": "Elkin"
+            },
+            {
+                "nombre": "Elvia"
+            },
+            {
+                "nombre": "Emiliana"
+            },
+            {
+                "nombre": "Erica"
+            },
+            {
+                "nombre": "Ernesto"
+            },
+            {
+                "nombre": "Esteban"
+            },
+            {
+                "nombre": "Estefanía"
+            },
+            {
+                "nombre": "Fabio"
+            },
+            {
+                "nombre": "Federico"
+            },
+            {
+                "nombre": "Felipe"
+            },
+            {
+                "nombre": "Fernando"
+            },
+            {
+                "nombre": "Francisco"
+            },
+            {
+                "nombre": "Franklin"
+            },
+            {
+                "nombre": "Fredy"
+            },
+            {
+                "nombre": "Gabriel"
+            },
+            {
+                "nombre": "German"
+            },
+            {
+                "nombre": "Gladys"
+            },
+            {
+                "nombre": "Gloria"
+            },
+            {
+                "nombre": "Gustavo"
+            },
+            {
+                "nombre": "Hector"
+            },
+            {
+                "nombre": "Helena"
+            },
+            {
+                "nombre": "Henry"
+            },
+            {
+                "nombre": "Hernan"
+            },
+            {
+                "nombre": "Hernan Dario"
+            },
+            {
+                "nombre": "Horacio"
+            },
+            {
+                "nombre": "Hugo"
+            },
+            {
+                "nombre": "Isabel"
+            },
+            {
+                "nombre": "Ivan"
+            },
+            {
+                "nombre": "Jaime"
+            },
+            {
+                "nombre": "Jairo"
+            },
+            {
+                "nombre": "Janeth"
+            },
+            {
+                "nombre": "Jazmin"
+            },
+            {
+                "nombre": "Jefferson"
+            },
+            {
+                "nombre": "Jenifer"
+            },
+            {
+                "nombre": "Jeronimo"
+            },
+            {
+                "nombre": "Jesús"
+            },
+            {
+                "nombre": "Jhon"
+            },
+            {
+                "nombre": "Jhonatan"
+            },
+            {
+                "nombre": "Jorge"
+            },
+            {
+                "nombre": "Jorge Ivan"
+            },
+            {
+                "nombre": "José"
+            },
+            {
+                "nombre": "Jose Antonio"
+            },
+            {
+                "nombre": "Jose Eduardo"
+            },
+            {
+                "nombre": "Jose Luis"
+            },
+            {
+                "nombre": "Juan"
+            },
+            {
+                "nombre": "Juan Camilo"
+            },
+            {
+                "nombre": "Juan Carlos"
+            },
+            {
+                "nombre": "Juan David"
+            },
+            {
+                "nombre": "Juan Diego"
+            },
+            {
+                "nombre": "Juan Esteban"
+            },
+            {
+                "nombre": "Juan Fernando"
+            },
+            {
+                "nombre": "Juan Manuel"
+            },
+            {
+                "nombre": "Juan Pablo"
+            },
+            {
+                "nombre": "Julian"
+            },
+            {
+                "nombre": "Juliana"
+            },
+            {
+                "nombre": "Julio Cesar"
+            },
+            {
+                "nombre": "Kelly"
+            },
+            {
+                "nombre": "Laura"
+            },
+            {
+                "nombre": "Leidy"
+            },
+            {
+                "nombre": "Leon"
+            },
+            {
+                "nombre": "Leonardo"
+            },
+            {
+                "nombre": "Liliana"
+            },
+            {
+                "nombre": "Lina"
+            },
+            {
+                "nombre": "Lina Marcela"
+            },
+            {
+                "nombre": "Lina Maria"
+            },
+            {
+                "nombre": "Lucas"
+            },
+            {
+                "nombre": "Luis"
+            },
+            {
+                "nombre": "Luis Alberto"
+            },
+            {
+                "nombre": "Luis Angel"
+            },
+            {
+                "nombre": "Luis Carlos"
+            },
+            {
+                "nombre": "Luis Eduardo"
+            },
+            {
+                "nombre": "Luis Fernando"
+            },
+            {
+                "nombre": "Luis Mario"
+            },
+            {
+                "nombre": "Luisa Fernanda"
+            },
+            {
+                "nombre": "Luz"
+            },
+            {
+                "nombre": "Luz Adriana"
+            },
+            {
+                "nombre": "Luz Diana"
+            },
+            {
+                "nombre": "Manuel"
+            },
+            {
+                "nombre": "Marcela"
+            },
+            {
+                "nombre": "Marcos"
+            },
+            {
+                "nombre": "Maria"
+            },
+            {
+                "nombre": "Maria Alejandra"
+            },
+            {
+                "nombre": "Maria Angelica"
+            },
+            {
+                "nombre": "Maria Clara"
+            },
+            {
+                "nombre": "Maria Elena"
+            },
+            {
+                "nombre": "Maria Eugenia"
+            },
+            {
+                "nombre": "Maria Fernanda"
+            },
+            {
+                "nombre": "Mariana"
+            },
+            {
+                "nombre": "Mariela"
+            },
+            {
+                "nombre": "Mario"
+            },
+            {
+                "nombre": "Marisol"
+            },
+            {
+                "nombre": "Marlon"
+            },
+            {
+                "nombre": "Martha"
+            },
+            {
+                "nombre": "Mary"
+            },
+            {
+                "nombre": "Mateo"
+            },
+            {
+                "nombre": "Mauricio"
+            },
+            {
+                "nombre": "Melissa"
+            },
+            {
+                "nombre": "Michelle"
+            },
+            {
+                "nombre": "Miguel"
+            },
+            {
+                "nombre": "Miguel Angel"
+            },
+            {
+                "nombre": "Milton"
+            },
+            {
+                "nombre": "Monica"
+            },
+            {
+                "nombre": "Nancy"
+            },
+            {
+                "nombre": "Natalia"
+            },
+            {
+                "nombre": "Nicolás"
+            },
+            {
+                "nombre": "Nora"
+            },
+            {
+                "nombre": "Olga"
+            },
+            {
+                "nombre": "Orlando"
+            },
+            {
+                "nombre": "Oscar"
+            },
+            {
+                "nombre": "Pablo"
+            },
+            {
+                "nombre": "Paola"
+            },
+            {
+                "nombre": "Patricia"
+            },
+            {
+                "nombre": "Paula"
+            },
+            {
+                "nombre": "Paula Andrea"
+            },
+            {
+                "nombre": "Pedro"
+            },
+            {
+                "nombre": "Pilar"
+            },
+            {
+                "nombre": "Raul"
+            },
+            {
+                "nombre": "Ricardo"
+            },
+            {
+                "nombre": "Rocio"
+            },
+            {
+                "nombre": "Rodrigo"
+            },
+            {
+                "nombre": "Ruben"
+            },
+            {
+                "nombre": "Samuel"
+            },
+            {
+                "nombre": "Sandra"
+            },
+            {
+                "nombre": "Santiago"
+            },
+            {
+                "nombre": "Sara"
+            },
+            {
+                "nombre": "Sebastian"
+            },
+            {
+                "nombre": "Sergio"
+            },
+            {
+                "nombre": "Simon"
+            },
+            {
+                "nombre": "Sofia"
+            },
+            {
+                "nombre": "Susana"
+            },
+            {
+                "nombre": "Tatiana"
+            },
+            {
+                "nombre": "Tomas"
+            },
+            {
+                "nombre": "Valentina"
+            },
+            {
+                "nombre": "Vanessa"
+            },
+            {
+                "nombre": "Veronica"
+            },
+            {
+                "nombre": "Victor"
+            },
+            {
+                "nombre": "Victoria"
+            },
+            {
+                "nombre": "Walter"
+            },
+            {
+                "nombre": "Wilson"
+            },
+            {
+                "nombre": "Ximena"
+            },
+            {
+                "nombre": "Xiomara"
+            },
+            {
+                "nombre": "Yadira"
+            },
+            {
+                "nombre": "Yesid"
+            },
+            {
+                "nombre": "Yolanda"
+            },
+            {
+                "nombre": "Yuliana"
+            },
+            {
+                "nombre": "Zully"
+            },
+            {
+                "nombre": "Seleccione"
+            }
         ];
         this.apellidos = [
             {
@@ -516,12 +990,10 @@ var CrearPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-crear',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Ingresa la Persona\n    </ion-title>\n\n		<ion-buttons end>\n      	<button ion-button icon-only (click)="fnCerrarSesion()">\n        		<ion-icon name="exit"></ion-icon>\n      	</button>\n    	</ion-buttons>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n<ion-grid>\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Nombre</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n			    	{{nombre.nombre}}\n			    </ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n\n    </ion-col>\n  </ion-row>\n\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Apellido</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n			    	</ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n    </ion-col>\n  </ion-row>\n\n\n<ion-row>\n    <ion-col>\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Profesion</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n				   	</ion-option>\n			    </ion-select>\n		      </ion-item>\n		 </ion-list>\n    </ion-col>\n  </ion-row>\n\n\n</ion-grid>\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">\n        <!-- (keyup.enter)="addcelular($event.target.value)" -->\n	</ion-input>\n	<br><br><br>\n\n   <button ion-button color="secondary" full (click)="irAListaPage(nuevoProspecto)" >Agregar a la Lista</button>\n\n  \n\n</ion-content>\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */],
-            __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */]) === "function" && _d || Object])
     ], CrearPage);
     return CrearPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=crear.js.map
