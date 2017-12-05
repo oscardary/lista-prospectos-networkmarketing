@@ -15,7 +15,6 @@ export class ProfesionesPage {
  	constructor(public navCtrl: NavController)
  				 {
 
-
  		this.items = [
       {
         'title': 'Maneje Uber',
@@ -294,10 +293,10 @@ export class ProfesionesPage {
 
       },
     ]
+
   }
 
   irACrearPage (item) {
-    debugger;
     this.navCtrl.setRoot(CrearPage, { item });
   }
 

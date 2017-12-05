@@ -7,6 +7,7 @@ import { CrearPage } from '../pages/crear/crear';
 import { ListaPage } from '../pages/lista/lista';
 import { ProfesionesPage } from '../pages/profesiones/profesiones';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,8 +18,9 @@ import { firebaseConfig } from '../enviroment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-import {HttpModule} from '@angular/http'
-import {AgregarProspectoService} from '../services/agregar-prospecto/agregar-prospecto.service';
+import { HttpModule } from '@angular/http'
+import { AgregarProspectoService } from '../services/agregar-prospecto/agregar-prospecto.service';
+import { Autenticacion } from '../services/autenticacion/autenticacion.service';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import {AgregarProspectoService} from '../services/agregar-prospecto/agregar-pro
     CrearPage,
     ListaPage,
     ProfesionesPage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -43,13 +46,15 @@ import {AgregarProspectoService} from '../services/agregar-prospecto/agregar-pro
     CrearPage,
     ListaPage,
     ProfesionesPage,
-    TabsPage
+    TabsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AgregarProspectoService,
+    Autenticacion
   ]
 })
 export class AppModule {}

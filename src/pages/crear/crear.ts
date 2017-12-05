@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ListaPage } from '../lista/lista';
 import { AgregarProspectoService } from '../../services/agregar-prospecto/agregar-prospecto.service';
+import { Autenticacion } from '../../services/autenticacion/autenticacion.service';
 //import { AngularFireDatabase } from 'angularfire2/database';
 //import { Observable } from 'rxjs/Observable';
 
@@ -32,7 +33,8 @@ export class CrearPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private aps: AgregarProspectoService	) {
+    private aps: AgregarProspectoService,
+    private auth: Autenticacion	) {
 
   	//this.items = db.list('/lista').valueChanges();
 
@@ -537,7 +539,6 @@ export class CrearPage {
 
   ]
 
-    debugger;
     if (this.navParams.get('item')) {
       this.profesionSeleccionada = this.navParams.get('item');
     }
@@ -558,6 +559,10 @@ export class CrearPage {
         //Ir a Lista
         this.navCtrl.setRoot(ListaPage, { key: ref.key });
       });
+    }
+
+    fnCerrarSesion(){
+      this.auth.fnLogout();
     }
 
 }
