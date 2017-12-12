@@ -687,92 +687,617 @@ var CrearPage = (function () {
         ];
         this.apellidos = [
             {
-                'apellido': 'Álvarez',
+                "apellido": "Acevedo"
             },
             {
-                'apellido': 'Arango',
+                "apellido": "Acosta"
             },
             {
-                'apellido': 'Acevedo',
+                "apellido": "Agudelo"
             },
             {
-                'apellido': 'Castro',
+                "apellido": "Aguilar"
             },
             {
-                'apellido': 'Rodríguez',
+                "apellido": "Aguirre"
             },
             {
-                'apellido': 'García',
+                "apellido": "Alvarado"
             },
             {
-                'apellido': 'Gómez',
+                "apellido": "Alvarez"
             },
             {
-                'apellido': 'González',
+                "apellido": "Alzate"
             },
             {
-                'apellido': 'Martínez',
+                "apellido": "Amaya"
             },
             {
-                'apellido': 'Montoya',
+                "apellido": "Angel"
             },
             {
-                'apellido': 'López',
+                "apellido": "Arango"
             },
             {
-                'apellido': 'Hernández',
+                "apellido": "Arboleda"
             },
             {
-                'apellido': 'Sánchez',
+                "apellido": "Ardila"
             },
             {
-                'apellido': 'Ramírez',
+                "apellido": "Arenas"
             },
             {
-                'apellido': 'Restrepo',
+                "apellido": "Arevalo"
             },
             {
-                'apellido': 'Pérez',
+                "apellido": "Arias"
             },
             {
-                'apellido': 'Díaz',
+                "apellido": "Ariza"
             },
             {
-                'apellido': 'Muñoz',
+                "apellido": "Avila"
             },
             {
-                'apellido': 'Rojas',
+                "apellido": "Ayala"
             },
             {
-                'apellido': 'Moreno',
+                "apellido": "Barrera"
             },
             {
-                'apellido': 'Jiménez',
+                "apellido": "Barrios"
             },
             {
-                'apellido': 'Orozco',
+                "apellido": "Bautista"
             },
             {
-                'apellido': 'Velásquez',
+                "apellido": "Becerra"
             },
             {
-                'apellido': 'Zapata',
+                "apellido": "Bedoya"
             },
             {
-                'apellido': 'Zuluaga',
+                "apellido": "Beltran"
             },
             {
-                'apellido': 'Zuleta',
+                "apellido": "Benavides"
             },
             {
-                'apellido': 'Obando',
+                "apellido": "Bermudez"
             },
             {
-                'apellido': 'Silva',
+                "apellido": "Bernal"
             },
             {
-                'apellido': 'Valencia',
+                "apellido": "Betancur"
             },
+            {
+                "apellido": "Blanco"
+            },
+            {
+                "apellido": "Bohorquez"
+            },
+            {
+                "apellido": "Bonilla"
+            },
+            {
+                "apellido": "Botero"
+            },
+            {
+                "apellido": "Buitrago"
+            },
+            {
+                "apellido": "Cabrera"
+            },
+            {
+                "apellido": "Caicedo"
+            },
+            {
+                "apellido": "Calderon"
+            },
+            {
+                "apellido": "Camacho"
+            },
+            {
+                "apellido": "Camargo"
+            },
+            {
+                "apellido": "Cano"
+            },
+            {
+                "apellido": "Cardenas"
+            },
+            {
+                "apellido": "Cardona"
+            },
+            {
+                "apellido": "Carrillo"
+            },
+            {
+                "apellido": "Carvajal"
+            },
+            {
+                "apellido": "Castañeda"
+            },
+            {
+                "apellido": "Castaño"
+            },
+            {
+                "apellido": "Castellanos"
+            },
+            {
+                "apellido": "Castillo"
+            },
+            {
+                "apellido": "Castro"
+            },
+            {
+                "apellido": "Cifuentes"
+            },
+            {
+                "apellido": "Cock"
+            },
+            {
+                "apellido": "Contreras"
+            },
+            {
+                "apellido": "Cordoba"
+            },
+            {
+                "apellido": "Correa"
+            },
+            {
+                "apellido": "Cortes"
+            },
+            {
+                "apellido": "Cruz"
+            },
+            {
+                "apellido": "Daza"
+            },
+            {
+                "apellido": "Delgado"
+            },
+            {
+                "apellido": "Diaz"
+            },
+            {
+                "apellido": "Duarte"
+            },
+            {
+                "apellido": "Duque"
+            },
+            {
+                "apellido": "Duran"
+            },
+            {
+                "apellido": "Escobar"
+            },
+            {
+                "apellido": "Espinosa"
+            },
+            {
+                "apellido": "Estrada"
+            },
+            {
+                "apellido": "Fajardo"
+            },
+            {
+                "apellido": "Fernandez"
+            },
+            {
+                "apellido": "Figueroa"
+            },
+            {
+                "apellido": "Florez"
+            },
+            {
+                "apellido": "Fonseca"
+            },
+            {
+                "apellido": "Forero"
+            },
+            {
+                "apellido": "Franco"
+            },
+            {
+                "apellido": "Galeano"
+            },
+            {
+                "apellido": "Galindo"
+            },
+            {
+                "apellido": "Gallego"
+            },
+            {
+                "apellido": "Galvis"
+            },
+            {
+                "apellido": "Garcia"
+            },
+            {
+                "apellido": "Garzon"
+            },
+            {
+                "apellido": "Gaviria"
+            },
+            {
+                "apellido": "Gil"
+            },
+            {
+                "apellido": "Giraldo"
+            },
+            {
+                "apellido": "Gomez"
+            },
+            {
+                "apellido": "Gonzales"
+            },
+            {
+                "apellido": "Gonzalez"
+            },
+            {
+                "apellido": "Guerrero"
+            },
+            {
+                "apellido": "Guevara"
+            },
+            {
+                "apellido": "Gutierrez"
+            },
+            {
+                "apellido": "Guzman"
+            },
+            {
+                "apellido": "Henao"
+            },
+            {
+                "apellido": "Hernandez"
+            },
+            {
+                "apellido": "Herrera"
+            },
+            {
+                "apellido": "Hoyos"
+            },
+            {
+                "apellido": "Hurtado"
+            },
+            {
+                "apellido": "Jaimes"
+            },
+            {
+                "apellido": "Jaramillo"
+            },
+            {
+                "apellido": "Jimenez"
+            },
+            {
+                "apellido": "Leon"
+            },
+            {
+                "apellido": "Londoño"
+            },
+            {
+                "apellido": "Lopez"
+            },
+            {
+                "apellido": "Lozano"
+            },
+            {
+                "apellido": "Luna"
+            },
+            {
+                "apellido": "Maldonado"
+            },
+            {
+                "apellido": "Marin"
+            },
+            {
+                "apellido": "Marquez"
+            },
+            {
+                "apellido": "Martinez"
+            },
+            {
+                "apellido": "Medina"
+            },
+            {
+                "apellido": "Mejia"
+            },
+            {
+                "apellido": "Melo"
+            },
+            {
+                "apellido": "Mendez"
+            },
+            {
+                "apellido": "Mendoza"
+            },
+            {
+                "apellido": "Mesa"
+            },
+            {
+                "apellido": "Molina"
+            },
+            {
+                "apellido": "Monroy"
+            },
+            {
+                "apellido": "Monsalve"
+            },
+            {
+                "apellido": "Montes"
+            },
+            {
+                "apellido": "Montoya"
+            },
+            {
+                "apellido": "Mora"
+            },
+            {
+                "apellido": "Morales"
+            },
+            {
+                "apellido": "Moreno"
+            },
+            {
+                "apellido": "Mosquera"
+            },
+            {
+                "apellido": "Muñoz"
+            },
+            {
+                "apellido": "Murcia"
+            },
+            {
+                "apellido": "Murillo"
+            },
+            {
+                "apellido": "Naranjo"
+            },
+            {
+                "apellido": "Narvaez"
+            },
+            {
+                "apellido": "Navarro"
+            },
+            {
+                "apellido": "Nieto"
+            },
+            {
+                "apellido": "Nino"
+            },
+            {
+                "apellido": "Obando"
+            },
+            {
+                "apellido": "Ocampo"
+            },
+            {
+                "apellido": "Ochoa"
+            },
+            {
+                "apellido": "Ordoñez"
+            },
+            {
+                "apellido": "Orozco"
+            },
+            {
+                "apellido": "Ortega"
+            },
+            {
+                "apellido": "Ortiz"
+            },
+            {
+                "apellido": "Osorio"
+            },
+            {
+                "apellido": "Ospina"
+            },
+            {
+                "apellido": "Pacheco"
+            },
+            {
+                "apellido": "Padilla"
+            },
+            {
+                "apellido": "Paez"
+            },
+            {
+                "apellido": "Palacio"
+            },
+            {
+                "apellido": "Palacios"
+            },
+            {
+                "apellido": "Pardo"
+            },
+            {
+                "apellido": "Parra"
+            },
+            {
+                "apellido": "Patiño"
+            },
+            {
+                "apellido": "Pena"
+            },
+            {
+                "apellido": "Perdomo"
+            },
+            {
+                "apellido": "Perez"
+            },
+            {
+                "apellido": "Pineda"
+            },
+            {
+                "apellido": "Pinto"
+            },
+            {
+                "apellido": "Pinzon"
+            },
+            {
+                "apellido": "Posada"
+            },
+            {
+                "apellido": "Prieto"
+            },
+            {
+                "apellido": "Pulido"
+            },
+            {
+                "apellido": "Quintero"
+            },
+            {
+                "apellido": "Ramirez"
+            },
+            {
+                "apellido": "Ramos"
+            },
+            {
+                "apellido": "Restrepo"
+            },
+            {
+                "apellido": "Reyes"
+            },
+            {
+                "apellido": "Rincon"
+            },
+            {
+                "apellido": "Rios"
+            },
+            {
+                "apellido": "Rivera"
+            },
+            {
+                "apellido": "Roa"
+            },
+            {
+                "apellido": "Rodriguez"
+            },
+            {
+                "apellido": "Rojas"
+            },
+            {
+                "apellido": "Romero"
+            },
+            {
+                "apellido": "Rua"
+            },
+            {
+                "apellido": "Rubio"
+            },
+            {
+                "apellido": "Rueda"
+            },
+            {
+                "apellido": "Ruiz"
+            },
+            {
+                "apellido": "Salazar"
+            },
+            {
+                "apellido": "Salcedo"
+            },
+            {
+                "apellido": "Sanabria"
+            },
+            {
+                "apellido": "Sanchez"
+            },
+            {
+                "apellido": "Sandoval"
+            },
+            {
+                "apellido": "Sarmiento"
+            },
+            {
+                "apellido": "Serna"
+            },
+            {
+                "apellido": "Serrano"
+            },
+            {
+                "apellido": "Sierra"
+            },
+            {
+                "apellido": "Silva"
+            },
+            {
+                "apellido": "Solano"
+            },
+            {
+                "apellido": "Soto"
+            },
+            {
+                "apellido": "Suarez"
+            },
+            {
+                "apellido": "Toro"
+            },
+            {
+                "apellido": "Torres"
+            },
+            {
+                "apellido": "Tovar"
+            },
+            {
+                "apellido": "Triana"
+            },
+            {
+                "apellido": "Trujillo"
+            },
+            {
+                "apellido": "Uribe"
+            },
+            {
+                "apellido": "Valencia"
+            },
+            {
+                "apellido": "Vanegas"
+            },
+            {
+                "apellido": "Vargas"
+            },
+            {
+                "apellido": "Vasquez"
+            },
+            {
+                "apellido": "Vega"
+            },
+            {
+                "apellido": "Velasco"
+            },
+            {
+                "apellido": "Velasquez"
+            },
+            {
+                "apellido": "Velez"
+            },
+            {
+                "apellido": "Vergara"
+            },
+            {
+                "apellido": "Villa"
+            },
+            {
+                "apellido": "Villegas"
+            },
+            {
+                "apellido": "Zambrano"
+            },
+            {
+                "apellido": "Zapata"
+            },
+            {
+                "apellido": "Zuleta"
+            },
+            {
+                "apellido": "Zuluaga"
+            }
         ];
         this.profesiones = [
             {
@@ -1032,7 +1557,7 @@ var CrearPage = (function () {
     };
     CrearPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-crear',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Ingresa la Persona\n\n    </ion-title>\n\n\n\n		<ion-buttons end>\n\n      	<button ion-button icon-only (click)="fnCerrarSesion()">\n\n        		<ion-icon name="exit"></ion-icon>\n\n      	</button>\n\n    	</ion-buttons>\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Nombre</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">\n\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n\n			    	{{nombre.nombre}}\n\n			    </ion-option>\n\n\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Apellido</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">\n\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n\n			    	</ion-option>\n\n\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n<ion-row>\n\n    <ion-col>\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Profesion</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">\n\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n\n				   	</ion-option>\n\n			    </ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-grid>\n\n	\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">\n\n        <!-- (keyup.enter)="addcelular($event.target.value)" -->\n\n	</ion-input>\n\n	<br><br><br><br><br>\n\n\n\n	\n\n\n\n   			<button icon-start="" ion-button color="addcolor" full large  (click)="createContact(nuevoProspecto)"><ion-icon name="list-box"></ion-icon>Agregar a la Lista</button>\n\n\n\n	\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/
+            selector: 'page-crear',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Ingresa la Persona\n\n    </ion-title>\n\n\n\n		<ion-buttons end>\n\n      	<button ion-button icon-only (click)="fnCerrarSesion()">\n\n        		<ion-icon name="exit"></ion-icon>\n\n      	</button>\n\n    	</ion-buttons>\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n<br><br><br>\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Nombre</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">\n\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n\n			    	{{nombre.nombre}}\n\n			    </ion-option>\n\n\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Apellido</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">\n\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n\n			    	</ion-option>\n\n\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n<ion-row>\n\n    <ion-col>\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Profesion</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">\n\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n\n				   	</ion-option>\n\n			    </ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-grid>\n\n	\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">\n\n        <!-- (keyup.enter)="addcelular($event.target.value)" -->\n\n	</ion-input>\n\n	<br><br><br><br><br>\n\n\n\n	\n\n\n\n   			<button icon-start="" ion-button color="addcolor" full large  (click)="createContact(nuevoProspecto)"><ion-icon name="list-box"></ion-icon>Agregar a la Lista</button>\n\n\n\n	<br>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */]) === "function" && _d || Object])
     ], CrearPage);
