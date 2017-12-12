@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { AgregarProspectoService } from '../../services/agregar-prospecto/agregar-prospecto.service';
+import { Autenticacion } from '../../services/autenticacion/autenticacion.service';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -15,9 +16,10 @@ export class ListaPage {
 
   constructor(
       public navCtrl: NavController,
-      private aps: AgregarProspectoService ) {
+      private aps: AgregarProspectoService,
+      private auth: Autenticacion ) {
 
-      this.listaContactos$ = this.aps.getContactList() //DB List
+      this.listaContactos$ = this.aps.getContactList("mnBZK5589qN5PlrTbsB4R1WaV5k1") //DB List
                               .snapshotChanges()    // Key and Value
                               .map(
                                   changes => {

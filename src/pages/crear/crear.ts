@@ -1013,26 +1013,27 @@ export class CrearPage {
 
   ]
 
-    if (this.navParams.get('item')) {
-      this.profesionSeleccionada = this.navParams.get('item');
-    }
+      if (this.navParams.get('item')) {
+        this.profesionSeleccionada = this.navParams.get('item');
+      }
 
   	};
 
-  /* agregarProspecto(nuevoProspecto){
-      nuevoProspecto.nombre =this.nombres.nombre;
-      nuevoProspecto.apellido =this.apellidos.apellido;
-      nuevoProspecto.profesion =this.profesiones.profesion;
+    createContact(nuevoProspecto){
+      //Consultar UID
+      this.auth.fnSesion.subscribe(sesion=>{
+        if (sesion){
 
-    };*/
+          nuevoProspecto.uid = sesion.uid;
 
-
-    irAListaPage(nuevoProspecto) {
-      //Agregar a Firebase
-      this.aps.addContactToList(nuevoProspecto).then(ref => {
-        //Ir a Lista
-        this.navCtrl.setRoot(ListaPage, { key: ref.key });
-      });
+          //Agregar a Firebase
+          this.aps.addContactToList(nuevoProspecto)
+            .then(ref => {
+              //Ir a Lista
+              this.navCtrl.setRoot(ListaPage, { key: ref.key });
+            });
+        }
+      })
     }
 
     fnCerrarSesion(){
