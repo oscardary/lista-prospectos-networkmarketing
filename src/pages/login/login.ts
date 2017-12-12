@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { /*IonicPage,*/ NavController, NavParams, AlertController } from 'ionic-angular';
 
-import { ProfesionesPage } from '../profesiones/profesiones';
+import { TabsPage } from '../tabs/tabs';
 import { Autenticacion } from '../../services/autenticacion/autenticacion.service';
 
 //@IonicPage()
@@ -48,11 +48,10 @@ export class LoginPage {
     .then((user)=>{
       console.log("Sesión Activa");
       // Validar si la sesion esta activa, si no direcciona al Login
-      debugger;
       this.auth.fnSesion.subscribe(sesion=>{
         if (sesion){
           //Ir a profesiones
-          this.navCtrl.setRoot(ProfesionesPage);
+          this.navCtrl.setRoot(TabsPage);
         }
       })
     })

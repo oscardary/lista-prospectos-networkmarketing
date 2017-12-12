@@ -4,12 +4,52 @@ webpackJsonp([0],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__crear_crear__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_lista__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profesiones_profesiones__ = __webpack_require__(287);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var TabsPage = (function () {
+    function TabsPage() {
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__profesiones_profesiones__["a" /* ProfesionesPage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__crear_crear__["a" /* CrearPage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__lista_lista__["a" /* ListaPage */];
+    }
+    TabsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/tabs/tabs.html"*/'<ion-tabs color="primary">\n  <ion-tab [root]="tab1Root" tabTitle="Profesiones" tabIcon="man"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Crear" tabIcon="add-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Lista" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/tabs/tabs.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], TabsPage);
+    return TabsPage;
+}());
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ }),
+
+/***/ 125:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrearPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_lista__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_lista__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -969,18 +1009,19 @@ var CrearPage = (function () {
         }
     }
     ;
-    /* agregarProspecto(nuevoProspecto){
-        nuevoProspecto.nombre =this.nombres.nombre;
-        nuevoProspecto.apellido =this.apellidos.apellido;
-        nuevoProspecto.profesion =this.profesiones.profesion;
-  
-      };*/
-    CrearPage.prototype.irAListaPage = function (nuevoProspecto) {
+    CrearPage.prototype.createContact = function (nuevoProspecto) {
         var _this = this;
-        //Agregar a Firebase
-        this.aps.addContactToList(nuevoProspecto).then(function (ref) {
-            //Ir a Lista
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__lista_lista__["a" /* ListaPage */], { key: ref.key });
+        //Consultar UID
+        this.auth.fnSesion.subscribe(function (sesion) {
+            if (sesion) {
+                nuevoProspecto.uid = sesion.uid;
+                //Agregar a Firebase
+                _this.aps.addContactToList(nuevoProspecto)
+                    .then(function (ref) {
+                    //Ir a Lista
+                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__lista_lista__["a" /* ListaPage */], { key: ref.key });
+                });
+            }
         });
     };
     CrearPage.prototype.fnCerrarSesion = function () {
@@ -988,7 +1029,7 @@ var CrearPage = (function () {
     };
     CrearPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-crear',template:/*ion-inline-start:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/crear/crear.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Ingresa la Persona\n    </ion-title>\n\n		<ion-buttons end>\n      	<button ion-button icon-only (click)="fnCerrarSesion()">\n        		<ion-icon name="exit"></ion-icon>\n      	</button>\n    	</ion-buttons>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n<ion-grid>\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Nombre</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n			    	{{nombre.nombre}}\n			    </ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n\n    </ion-col>\n  </ion-row>\n\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Apellido</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n			    	</ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n    </ion-col>\n  </ion-row>\n\n\n<ion-row>\n    <ion-col>\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Profesion</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n				   	</ion-option>\n			    </ion-select>\n		      </ion-item>\n		 </ion-list>\n    </ion-col>\n  </ion-row>\n\n\n</ion-grid>\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">\n        <!-- (keyup.enter)="addcelular($event.target.value)" -->\n	</ion-input>\n	<br><br><br>\n\n   <button ion-button color="secondary" full (click)="irAListaPage(nuevoProspecto)" >Agregar a la Lista</button>\n\n  \n\n</ion-content>\n'/*ion-inline-end:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/crear/crear.html"*/
+            selector: 'page-crear',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/crear/crear.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Ingresa la Persona\n    </ion-title>\n\n		<ion-buttons end>\n      	<button ion-button icon-only (click)="fnCerrarSesion()">\n        		<ion-icon name="exit"></ion-icon>\n      	</button>\n    	</ion-buttons>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n<ion-grid>\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Nombre</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n			    	{{nombre.nombre}}\n			    </ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n\n    </ion-col>\n  </ion-row>\n\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Apellido</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n			    	</ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n    </ion-col>\n  </ion-row>\n\n\n<ion-row>\n    <ion-col>\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Profesion</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n				   	</ion-option>\n			    </ion-select>\n		      </ion-item>\n		 </ion-list>\n    </ion-col>\n  </ion-row>\n\n\n</ion-grid>\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">\n        <!-- (keyup.enter)="addcelular($event.target.value)" -->\n	</ion-input>\n	<br><br><br>\n\n   <button ion-button color="secondary" full (click)="createContact(nuevoProspecto)" >Agregar a la Lista</button>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/crear/crear.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -1002,14 +1043,15 @@ var CrearPage = (function () {
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_agregar_prospecto_agregar_prospecto_service__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_agregar_prospecto_agregar_prospecto_service__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_autenticacion_autenticacion_service__ = __webpack_require__(58);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -1030,22 +1072,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ListaPage = (function () {
-    function ListaPage(navCtrl, aps) {
+    function ListaPage(navCtrl, aps, auth) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.aps = aps;
-        this.listaContactos$ = this.aps.getContactList() //DB List
-            .snapshotChanges() // Key and Value
-            .map(function (changes) {
-            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        this.auth = auth;
+        this.auth.fnSesion.subscribe(function (sesion) {
+            if (sesion) {
+                _this.listaContactos$ = _this.aps.getContactList(sesion.uid) //DB List
+                    .snapshotChanges() // Key and Value
+                    .map(function (changes) {
+                    return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+                });
+            }
         });
     }
     ListaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-lista',template:/*ion-inline-start:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/lista/lista.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Lista\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg social-cards">\n  <ion-list>\n\n\n    <ion-item-divider color="light">Prospectos</ion-item-divider>\n\n    <ion-card *ngFor="let contacto of listaContactos$ | async">\n    		<ion-card-content>\n    			<ion-row>\n    				<ion-col col-1>\n    				<ion-icon name="person" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-10>\n    					<p>{{contacto.nombre}} {{contacto.apellido}}</p>\n    				</ion-col>\n    				<!-- <ion-col col-5>\n    					<p></p>\n    				</ion-col> -->\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n 				<ion-row>\n 					<ion-col col-1>\n    				<ion-icon [name]="contacto.icon" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-6>\n    					<p>{{contacto.profesion}}</p>\n    				</ion-col>\n    				<ion-col col-4>\n    					<p>{{contacto.telefono}}</p>\n    				</ion-col>\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n\n  			</ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/lista/lista.html"*/
+            selector: 'page-lista',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/lista/lista.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Lista\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg social-cards">\n  <ion-list>\n\n\n    <ion-item-divider color="light">Prospectos</ion-item-divider>\n\n    <ion-card *ngFor="let contacto of listaContactos$ | async">\n    		<ion-card-content>\n    			<ion-row>\n    				<ion-col col-1>\n    				<ion-icon name="person" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-10>\n    					<p>{{contacto.nombre}} {{contacto.apellido}}</p>\n    				</ion-col>\n    				<!-- <ion-col col-5>\n    					<p></p>\n    				</ion-col> -->\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n 				<ion-row>\n 					<ion-col col-1>\n    				<ion-icon [name]="contacto.icon" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-6>\n    					<p>{{contacto.profesion}}</p>\n    				</ion-col>\n    				<ion-col col-4>\n    					<p>{{contacto.telefono}}</p>\n    				</ion-col>\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n\n  			</ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/lista/lista.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */]])
+            __WEBPACK_IMPORTED_MODULE_2__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */],
+            __WEBPACK_IMPORTED_MODULE_3__services_autenticacion_autenticacion_service__["a" /* Autenticacion */]])
     ], ListaPage);
     return ListaPage;
 }());
@@ -1054,13 +1104,13 @@ var ListaPage = (function () {
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgregarProspectoService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(235);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1073,37 +1123,73 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AgregarProspectoService = (function () {
+    //Validar tipos de datos con el item.module.ts
     function AgregarProspectoService(afd) {
         this.afd = afd;
-        //Validar tipos de datos con el item.module.ts
-        this.apListRef = this.afd.list('personas');
         // code...
     }
-    AgregarProspectoService.prototype.getContactList = function () {
-        return this.apListRef;
+    AgregarProspectoService.prototype.getContactList = function (sUserID) {
+        //return this.apListRef;
+        return this.afd.list('/listaprospectos/', function (ref) { return ref.orderByChild('uid').equalTo(sUserID); });
     };
     AgregarProspectoService.prototype.addContactToList = function (nuevoProspecto) {
-        return this.apListRef.push(nuevoProspecto);
+        //return this.apListRef.push(nuevoProspecto);
+        return this.afd.list('/listaprospectos/').push(nuevoProspecto);
     };
     AgregarProspectoService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object])
     ], AgregarProspectoService);
     return AgregarProspectoService;
+    var _a;
 }());
 
 //# sourceMappingURL=agregar-prospecto.service.js.map
 
 /***/ }),
 
-/***/ 136:
+/***/ 148:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 148;
+
+/***/ }),
+
+/***/ 191:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 191;
+
+/***/ }),
+
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfesionesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__crear_crear__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__crear_crear__ = __webpack_require__(125);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1358,7 +1444,7 @@ var ProfesionesPage = (function () {
     };
     ProfesionesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profesiones',template:/*ion-inline-start:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/profesiones/profesiones.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Profesiones</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <br>\n  <ion-list>\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n    <button ion-item *ngFor="let item of items" icon-start\n      (click)=irACrearPage(item) >\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{ item.title }}\n    </button>\n  </ion-list>\n</ion-content>\n\n'/*ion-inline-end:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/profesiones/profesiones.html"*/
+            selector: 'page-profesiones',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/profesiones/profesiones.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Profesiones</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <br>\n  <ion-list>\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n    <button ion-item *ngFor="let item of items" icon-start\n      (click)=irACrearPage(item) >\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{ item.title }}\n    </button>\n  </ion-list>\n</ion-content>\n\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/profesiones/profesiones.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], ProfesionesPage);
@@ -1369,83 +1455,6 @@ var ProfesionesPage = (function () {
 
 /***/ }),
 
-/***/ 148:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 148;
-
-/***/ }),
-
-/***/ 191:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 191;
-
-/***/ }),
-
-/***/ 235:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__crear_crear__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_lista__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profesiones_profesiones__ = __webpack_require__(136);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-//import { LoginPage } from '../login/login';
-var TabsPage = (function () {
-    function TabsPage() {
-        //tab0Root = LoginPage;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__profesiones_profesiones__["a" /* ProfesionesPage */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__crear_crear__["a" /* CrearPage */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__lista_lista__["a" /* ListaPage */];
-    }
-    TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/tabs/tabs.html"*/'<ion-tabs color="primary">\n  <!--<ion-tab [root]="tab0Root" tabTitle="Login" tabIcon="user"></ion-tab>-->\n  <ion-tab [root]="tab1Root" tabTitle="Profesiones" tabIcon="man"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Crear" tabIcon="add-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Lista" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/tabs/tabs.html"*/
-            //templateUrl: 'login.html'
-        }),
-        __metadata("design:paramtypes", [])
-    ], TabsPage);
-    return TabsPage;
-}());
-
-//# sourceMappingURL=tabs.js.map
-
-/***/ }),
-
 /***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1453,8 +1462,8 @@ var TabsPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profesiones_profesiones__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_autenticacion_autenticacion_service__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_autenticacion_autenticacion_service__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1504,11 +1513,10 @@ var LoginPage = (function () {
             .then(function (user) {
             console.log("Sesión Activa");
             // Validar si la sesion esta activa, si no direcciona al Login
-            debugger;
             _this.auth.fnSesion.subscribe(function (sesion) {
                 if (sesion) {
                     //Ir a profesiones
-                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__profesiones_profesiones__["a" /* ProfesionesPage */]);
+                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]);
                 }
             });
         })
@@ -1523,7 +1531,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Acceso</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding><br><br><br><br><br><br>\n    <ion-list>\n        <form>\n            <ion-item href="#">\n                <ion-label floating></ion-label>\n                <ion-input placeholder="Email" type="text" autocapitalize="off" required\n                name="email" [(ngModel)]="user.email" ></ion-input>\n            </ion-item>\n\n            <ion-item href="#">\n                <ion-label floating></ion-label>\n                <ion-input placeholder="Contraseña" type="password" required\n                name="password" [(ngModel)]="user.password" ></ion-input>\n            </ion-item>\n<br><br>\n            <div>\n                <button type="submit" ion-button (click)="fnLogin()"\n                block color="primary" large full>Iniciar Sesión</button>\n\n                <button type="submit" ion-button (click)="fnRegister()"\n                block color="secondary" large full>Registrarse</button>\n            </div>\n        </form>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Acceso</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding><br><br><br><br><br><br>\n    <ion-list>\n        <form>\n            <ion-item href="#">\n                <ion-label floating></ion-label>\n                <ion-input placeholder="Email" type="text" autocapitalize="off" required\n                name="email" [(ngModel)]="user.email" ></ion-input>\n            </ion-item>\n\n            <ion-item href="#">\n                <ion-label floating></ion-label>\n                <ion-input placeholder="Contraseña" type="password" required\n                name="password" [(ngModel)]="user.password" ></ion-input>\n            </ion-item>\n<br><br>\n            <div>\n                <button type="submit" ion-button (click)="fnLogin()"\n                block color="primary" large full>Iniciar Sesión</button>\n\n                <button type="submit" ion-button (click)="fnRegister()"\n                block color="secondary" large full>Registrarse</button>\n            </div>\n        </form>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -1560,20 +1568,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_crear_crear__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_lista_lista__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_profesiones_profesiones__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_crear_crear__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_lista_lista__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_profesiones_profesiones__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__enviroment__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angularfire2_auth__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_angularfire2_database__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angularfire2_auth__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_angularfire2_database__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_http__ = __webpack_require__(454);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_agregar_prospecto_agregar_prospecto_service__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_autenticacion_autenticacion_service__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_agregar_prospecto_agregar_prospecto_service__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_autenticacion_autenticacion_service__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1655,9 +1663,9 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_autenticacion_autenticacion_service__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_autenticacion_autenticacion_service__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1695,7 +1703,7 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/mauroarango/Documents/GitHub/lista-prospectos-networkmarketing/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
@@ -1726,13 +1734,13 @@ var firebaseConfig = {
 
 /***/ }),
 
-/***/ 76:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Autenticacion; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(284);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
