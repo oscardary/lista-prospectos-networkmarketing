@@ -72,14 +72,15 @@
 
 
 </ion-grid>
-
+	
 	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">
         <!-- (keyup.enter)="addcelular($event.target.value)" -->
 	</ion-input>
-	<br><br><br>
+	<br><br><br><br><br>
 
-   <button ion-button color="secondary" full (click)="createContact(nuevoProspecto)" >Agregar a la Lista</button>
+	
 
+   			<button icon-start="" ion-button color="addcolor" full large  (click)="createContact(nuevoProspecto)"><ion-icon name="list-box"></ion-icon>Agregar a la Lista</button>
 
-
+	
 </ion-content>

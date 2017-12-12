@@ -5,6 +5,8 @@ import { AgregarProspectoService } from '../../services/agregar-prospecto/agrega
 import { Autenticacion } from '../../services/autenticacion/autenticacion.service';
 //import { AngularFireDatabase } from 'angularfire2/database';
 //import { Observable } from 'rxjs/Observable';
+import { LoginPage } from '../login/login';
+
 
 @Component({
   selector: 'page-crear',
@@ -1038,6 +1040,7 @@ export class CrearPage {
 
     fnCerrarSesion(){
       this.auth.fnLogout();
+      this.navCtrl.setRoot(LoginPage);
     }
 
 }
