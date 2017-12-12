@@ -19,7 +19,9 @@ export class ListaPage {
       private aps: AgregarProspectoService,
       private auth: Autenticacion ) {
 
-      this.listaContactos$ = this.aps.getContactList("mnBZK5589qN5PlrTbsB4R1WaV5k1") //DB List
+      this.auth.fnSesion.subscribe(sesion => {
+        if (sesion) {
+          this.listaContactos$ = this.aps.getContactList(sesion.uid) //DB List
                               .snapshotChanges()    // Key and Value
                               .map(
                                   changes => {
@@ -28,6 +30,8 @@ export class ListaPage {
                                           ...c.payload.val()
                                       }));
                                   });
+        }
+      })
   }
 
 }
