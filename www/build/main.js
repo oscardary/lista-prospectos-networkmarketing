@@ -29,7 +29,7 @@ var TabsPage = (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__lista_lista__["a" /* ListaPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/tabs/tabs.html"*/'<ion-tabs color="primary">\n  <ion-tab [root]="tab1Root" tabTitle="Profesiones" tabIcon="man"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Crear" tabIcon="add-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Lista" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\tabs\tabs.html"*/'<ion-tabs color="primary">\n\n  <ion-tab [root]="tab1Root" tabTitle="Profesiones" tabIcon="man"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Crear" tabIcon="add-circle"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Lista" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -50,6 +50,7 @@ var TabsPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lista_lista__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(288);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66,6 +67,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 //import { AngularFireDatabase } from 'angularfire2/database';
 //import { Observable } from 'rxjs/Observable';
+
 var CrearPage = (function () {
     //items: Observable<any[]>;
     //nombre: any;
@@ -685,92 +687,617 @@ var CrearPage = (function () {
         ];
         this.apellidos = [
             {
-                'apellido': 'Álvarez',
+                "apellido": "Acevedo"
             },
             {
-                'apellido': 'Arango',
+                "apellido": "Acosta"
             },
             {
-                'apellido': 'Acevedo',
+                "apellido": "Agudelo"
             },
             {
-                'apellido': 'Castro',
+                "apellido": "Aguilar"
             },
             {
-                'apellido': 'Rodríguez',
+                "apellido": "Aguirre"
             },
             {
-                'apellido': 'García',
+                "apellido": "Alvarado"
             },
             {
-                'apellido': 'Gómez',
+                "apellido": "Alvarez"
             },
             {
-                'apellido': 'González',
+                "apellido": "Alzate"
             },
             {
-                'apellido': 'Martínez',
+                "apellido": "Amaya"
             },
             {
-                'apellido': 'Montoya',
+                "apellido": "Angel"
             },
             {
-                'apellido': 'López',
+                "apellido": "Arango"
             },
             {
-                'apellido': 'Hernández',
+                "apellido": "Arboleda"
             },
             {
-                'apellido': 'Sánchez',
+                "apellido": "Ardila"
             },
             {
-                'apellido': 'Ramírez',
+                "apellido": "Arenas"
             },
             {
-                'apellido': 'Restrepo',
+                "apellido": "Arevalo"
             },
             {
-                'apellido': 'Pérez',
+                "apellido": "Arias"
             },
             {
-                'apellido': 'Díaz',
+                "apellido": "Ariza"
             },
             {
-                'apellido': 'Muñoz',
+                "apellido": "Avila"
             },
             {
-                'apellido': 'Rojas',
+                "apellido": "Ayala"
             },
             {
-                'apellido': 'Moreno',
+                "apellido": "Barrera"
             },
             {
-                'apellido': 'Jiménez',
+                "apellido": "Barrios"
             },
             {
-                'apellido': 'Orozco',
+                "apellido": "Bautista"
             },
             {
-                'apellido': 'Velásquez',
+                "apellido": "Becerra"
             },
             {
-                'apellido': 'Zapata',
+                "apellido": "Bedoya"
             },
             {
-                'apellido': 'Zuluaga',
+                "apellido": "Beltran"
             },
             {
-                'apellido': 'Zuleta',
+                "apellido": "Benavides"
             },
             {
-                'apellido': 'Obando',
+                "apellido": "Bermudez"
             },
             {
-                'apellido': 'Silva',
+                "apellido": "Bernal"
             },
             {
-                'apellido': 'Valencia',
+                "apellido": "Betancur"
             },
+            {
+                "apellido": "Blanco"
+            },
+            {
+                "apellido": "Bohorquez"
+            },
+            {
+                "apellido": "Bonilla"
+            },
+            {
+                "apellido": "Botero"
+            },
+            {
+                "apellido": "Buitrago"
+            },
+            {
+                "apellido": "Cabrera"
+            },
+            {
+                "apellido": "Caicedo"
+            },
+            {
+                "apellido": "Calderon"
+            },
+            {
+                "apellido": "Camacho"
+            },
+            {
+                "apellido": "Camargo"
+            },
+            {
+                "apellido": "Cano"
+            },
+            {
+                "apellido": "Cardenas"
+            },
+            {
+                "apellido": "Cardona"
+            },
+            {
+                "apellido": "Carrillo"
+            },
+            {
+                "apellido": "Carvajal"
+            },
+            {
+                "apellido": "Castañeda"
+            },
+            {
+                "apellido": "Castaño"
+            },
+            {
+                "apellido": "Castellanos"
+            },
+            {
+                "apellido": "Castillo"
+            },
+            {
+                "apellido": "Castro"
+            },
+            {
+                "apellido": "Cifuentes"
+            },
+            {
+                "apellido": "Cock"
+            },
+            {
+                "apellido": "Contreras"
+            },
+            {
+                "apellido": "Cordoba"
+            },
+            {
+                "apellido": "Correa"
+            },
+            {
+                "apellido": "Cortes"
+            },
+            {
+                "apellido": "Cruz"
+            },
+            {
+                "apellido": "Daza"
+            },
+            {
+                "apellido": "Delgado"
+            },
+            {
+                "apellido": "Diaz"
+            },
+            {
+                "apellido": "Duarte"
+            },
+            {
+                "apellido": "Duque"
+            },
+            {
+                "apellido": "Duran"
+            },
+            {
+                "apellido": "Escobar"
+            },
+            {
+                "apellido": "Espinosa"
+            },
+            {
+                "apellido": "Estrada"
+            },
+            {
+                "apellido": "Fajardo"
+            },
+            {
+                "apellido": "Fernandez"
+            },
+            {
+                "apellido": "Figueroa"
+            },
+            {
+                "apellido": "Florez"
+            },
+            {
+                "apellido": "Fonseca"
+            },
+            {
+                "apellido": "Forero"
+            },
+            {
+                "apellido": "Franco"
+            },
+            {
+                "apellido": "Galeano"
+            },
+            {
+                "apellido": "Galindo"
+            },
+            {
+                "apellido": "Gallego"
+            },
+            {
+                "apellido": "Galvis"
+            },
+            {
+                "apellido": "Garcia"
+            },
+            {
+                "apellido": "Garzon"
+            },
+            {
+                "apellido": "Gaviria"
+            },
+            {
+                "apellido": "Gil"
+            },
+            {
+                "apellido": "Giraldo"
+            },
+            {
+                "apellido": "Gomez"
+            },
+            {
+                "apellido": "Gonzales"
+            },
+            {
+                "apellido": "Gonzalez"
+            },
+            {
+                "apellido": "Guerrero"
+            },
+            {
+                "apellido": "Guevara"
+            },
+            {
+                "apellido": "Gutierrez"
+            },
+            {
+                "apellido": "Guzman"
+            },
+            {
+                "apellido": "Henao"
+            },
+            {
+                "apellido": "Hernandez"
+            },
+            {
+                "apellido": "Herrera"
+            },
+            {
+                "apellido": "Hoyos"
+            },
+            {
+                "apellido": "Hurtado"
+            },
+            {
+                "apellido": "Jaimes"
+            },
+            {
+                "apellido": "Jaramillo"
+            },
+            {
+                "apellido": "Jimenez"
+            },
+            {
+                "apellido": "Leon"
+            },
+            {
+                "apellido": "Londoño"
+            },
+            {
+                "apellido": "Lopez"
+            },
+            {
+                "apellido": "Lozano"
+            },
+            {
+                "apellido": "Luna"
+            },
+            {
+                "apellido": "Maldonado"
+            },
+            {
+                "apellido": "Marin"
+            },
+            {
+                "apellido": "Marquez"
+            },
+            {
+                "apellido": "Martinez"
+            },
+            {
+                "apellido": "Medina"
+            },
+            {
+                "apellido": "Mejia"
+            },
+            {
+                "apellido": "Melo"
+            },
+            {
+                "apellido": "Mendez"
+            },
+            {
+                "apellido": "Mendoza"
+            },
+            {
+                "apellido": "Mesa"
+            },
+            {
+                "apellido": "Molina"
+            },
+            {
+                "apellido": "Monroy"
+            },
+            {
+                "apellido": "Monsalve"
+            },
+            {
+                "apellido": "Montes"
+            },
+            {
+                "apellido": "Montoya"
+            },
+            {
+                "apellido": "Mora"
+            },
+            {
+                "apellido": "Morales"
+            },
+            {
+                "apellido": "Moreno"
+            },
+            {
+                "apellido": "Mosquera"
+            },
+            {
+                "apellido": "Muñoz"
+            },
+            {
+                "apellido": "Murcia"
+            },
+            {
+                "apellido": "Murillo"
+            },
+            {
+                "apellido": "Naranjo"
+            },
+            {
+                "apellido": "Narvaez"
+            },
+            {
+                "apellido": "Navarro"
+            },
+            {
+                "apellido": "Nieto"
+            },
+            {
+                "apellido": "Nino"
+            },
+            {
+                "apellido": "Obando"
+            },
+            {
+                "apellido": "Ocampo"
+            },
+            {
+                "apellido": "Ochoa"
+            },
+            {
+                "apellido": "Ordoñez"
+            },
+            {
+                "apellido": "Orozco"
+            },
+            {
+                "apellido": "Ortega"
+            },
+            {
+                "apellido": "Ortiz"
+            },
+            {
+                "apellido": "Osorio"
+            },
+            {
+                "apellido": "Ospina"
+            },
+            {
+                "apellido": "Pacheco"
+            },
+            {
+                "apellido": "Padilla"
+            },
+            {
+                "apellido": "Paez"
+            },
+            {
+                "apellido": "Palacio"
+            },
+            {
+                "apellido": "Palacios"
+            },
+            {
+                "apellido": "Pardo"
+            },
+            {
+                "apellido": "Parra"
+            },
+            {
+                "apellido": "Patiño"
+            },
+            {
+                "apellido": "Pena"
+            },
+            {
+                "apellido": "Perdomo"
+            },
+            {
+                "apellido": "Perez"
+            },
+            {
+                "apellido": "Pineda"
+            },
+            {
+                "apellido": "Pinto"
+            },
+            {
+                "apellido": "Pinzon"
+            },
+            {
+                "apellido": "Posada"
+            },
+            {
+                "apellido": "Prieto"
+            },
+            {
+                "apellido": "Pulido"
+            },
+            {
+                "apellido": "Quintero"
+            },
+            {
+                "apellido": "Ramirez"
+            },
+            {
+                "apellido": "Ramos"
+            },
+            {
+                "apellido": "Restrepo"
+            },
+            {
+                "apellido": "Reyes"
+            },
+            {
+                "apellido": "Rincon"
+            },
+            {
+                "apellido": "Rios"
+            },
+            {
+                "apellido": "Rivera"
+            },
+            {
+                "apellido": "Roa"
+            },
+            {
+                "apellido": "Rodriguez"
+            },
+            {
+                "apellido": "Rojas"
+            },
+            {
+                "apellido": "Romero"
+            },
+            {
+                "apellido": "Rua"
+            },
+            {
+                "apellido": "Rubio"
+            },
+            {
+                "apellido": "Rueda"
+            },
+            {
+                "apellido": "Ruiz"
+            },
+            {
+                "apellido": "Salazar"
+            },
+            {
+                "apellido": "Salcedo"
+            },
+            {
+                "apellido": "Sanabria"
+            },
+            {
+                "apellido": "Sanchez"
+            },
+            {
+                "apellido": "Sandoval"
+            },
+            {
+                "apellido": "Sarmiento"
+            },
+            {
+                "apellido": "Serna"
+            },
+            {
+                "apellido": "Serrano"
+            },
+            {
+                "apellido": "Sierra"
+            },
+            {
+                "apellido": "Silva"
+            },
+            {
+                "apellido": "Solano"
+            },
+            {
+                "apellido": "Soto"
+            },
+            {
+                "apellido": "Suarez"
+            },
+            {
+                "apellido": "Toro"
+            },
+            {
+                "apellido": "Torres"
+            },
+            {
+                "apellido": "Tovar"
+            },
+            {
+                "apellido": "Triana"
+            },
+            {
+                "apellido": "Trujillo"
+            },
+            {
+                "apellido": "Uribe"
+            },
+            {
+                "apellido": "Valencia"
+            },
+            {
+                "apellido": "Vanegas"
+            },
+            {
+                "apellido": "Vargas"
+            },
+            {
+                "apellido": "Vasquez"
+            },
+            {
+                "apellido": "Vega"
+            },
+            {
+                "apellido": "Velasco"
+            },
+            {
+                "apellido": "Velasquez"
+            },
+            {
+                "apellido": "Velez"
+            },
+            {
+                "apellido": "Vergara"
+            },
+            {
+                "apellido": "Villa"
+            },
+            {
+                "apellido": "Villegas"
+            },
+            {
+                "apellido": "Zambrano"
+            },
+            {
+                "apellido": "Zapata"
+            },
+            {
+                "apellido": "Zuleta"
+            },
+            {
+                "apellido": "Zuluaga"
+            }
         ];
         this.profesiones = [
             {
@@ -1026,17 +1553,16 @@ var CrearPage = (function () {
     };
     CrearPage.prototype.fnCerrarSesion = function () {
         this.auth.fnLogout();
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
     };
     CrearPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-crear',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/crear/crear.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Ingresa la Persona\n    </ion-title>\n\n		<ion-buttons end>\n      	<button ion-button icon-only (click)="fnCerrarSesion()">\n        		<ion-icon name="exit"></ion-icon>\n      	</button>\n    	</ion-buttons>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n<ion-grid>\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Nombre</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n			    	{{nombre.nombre}}\n			    </ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n\n    </ion-col>\n  </ion-row>\n\n  <ion-row>\n    <ion-col>\n\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Apellido</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n			    	</ion-option>\n\n				</ion-select>\n		      </ion-item>\n		 </ion-list>\n\n\n    </ion-col>\n  </ion-row>\n\n\n<ion-row>\n    <ion-col>\n		<ion-list>\n		      <ion-item>\n		        <ion-label>Profesion</ion-label>\n		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n				   	</ion-option>\n			    </ion-select>\n		      </ion-item>\n		 </ion-list>\n    </ion-col>\n  </ion-row>\n\n\n</ion-grid>\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">\n        <!-- (keyup.enter)="addcelular($event.target.value)" -->\n	</ion-input>\n	<br><br><br>\n\n   <button ion-button color="secondary" full (click)="createContact(nuevoProspecto)" >Agregar a la Lista</button>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/crear/crear.html"*/
+            selector: 'page-crear',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      Ingresa la Persona\n\n    </ion-title>\n\n\n\n		<ion-buttons end>\n\n      	<button ion-button icon-only (click)="fnCerrarSesion()">\n\n        		<ion-icon name="exit"></ion-icon>\n\n      	</button>\n\n    	</ion-buttons>\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n<br><br><br>\n\n\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Nombre</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.nombre" interface="action-sheet">\n\n			    	<ion-option *ngFor="let nombre of nombres" value="{{nombre.nombre}}">\n\n			    	{{nombre.nombre}}\n\n			    </ion-option>\n\n\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Apellido</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.apellido" interface="action-sheet">\n\n			    	<ion-option *ngFor="let apellido of apellidos" value="{{apellido.apellido}}">{{apellido.apellido}}\n\n			    	</ion-option>\n\n\n\n				</ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n\n\n\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n<ion-row>\n\n    <ion-col>\n\n		<ion-list>\n\n		      <ion-item>\n\n		        <ion-label>Profesion</ion-label>\n\n		        <ion-select [(ngModel)]="nuevoProspecto.profesion" interface="action-sheet">\n\n				    	<ion-option *ngFor="let profesion of profesiones" value="{{profesion.profesion}}">{{profesion.profesion}}\n\n				   	</ion-option>\n\n			    </ion-select>\n\n		      </ion-item>\n\n		 </ion-list>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n\n\n</ion-grid>\n\n	\n\n	<ion-input type="number" placeholder="Agrega el Celular de la Persona" [(ngModel)]="nuevoProspecto.telefono">\n\n        <!-- (keyup.enter)="addcelular($event.target.value)" -->\n\n	</ion-input>\n\n	<br><br><br><br><br>\n\n\n\n	\n\n\n\n   			<button icon-start="" ion-button color="addcolor" full large  (click)="createContact(nuevoProspecto)"><ion-icon name="list-box"></ion-icon>Agregar a la Lista</button>\n\n\n\n	<br>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\crear\crear.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */],
-            __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_autenticacion_autenticacion_service__["a" /* Autenticacion */]) === "function" && _d || Object])
     ], CrearPage);
     return CrearPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=crear.js.map
@@ -1091,7 +1617,7 @@ var ListaPage = (function () {
     }
     ListaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-lista',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/lista/lista.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Lista\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg social-cards">\n  <ion-list>\n\n\n    <ion-item-divider color="light">Prospectos</ion-item-divider>\n\n    <ion-card *ngFor="let contacto of listaContactos$ | async">\n    		<ion-card-content>\n    			<ion-row>\n    				<ion-col col-1>\n    				<ion-icon name="person" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-10>\n    					<p>{{contacto.nombre}} {{contacto.apellido}}</p>\n    				</ion-col>\n    				<!-- <ion-col col-5>\n    					<p></p>\n    				</ion-col> -->\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n 				<ion-row>\n 					<ion-col col-1>\n    				<ion-icon [name]="contacto.icon" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-6>\n    					<p>{{contacto.profesion}}</p>\n    				</ion-col>\n    				<ion-col col-4>\n    					<p>{{contacto.telefono}}</p>\n    				</ion-col>\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n\n  			</ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/lista/lista.html"*/
+            selector: 'page-lista',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\lista\lista.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Lista\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="cards-bg social-cards">\n  <ion-list>\n\n\n    <ion-item-divider color="light">Prospectos</ion-item-divider>\n\n    <ion-card *ngFor="let contacto of listaContactos$ | async">\n    		<ion-card-content>\n    			<ion-row>\n    				<ion-col col-1>\n    				<ion-icon name="person" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-10>\n    					<p>{{contacto.nombre}} {{contacto.apellido}}</p>\n    				</ion-col>\n    				<!-- <ion-col col-5>\n    					<p></p>\n    				</ion-col> -->\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n 				<ion-row>\n 					<ion-col col-1>\n    				<ion-icon [name]="contacto.icon" item-start></ion-icon>\n    				</ion-col>\n    				<ion-col col-6>\n    					<p>{{contacto.profesion}}</p>\n    				</ion-col>\n    				<ion-col col-4>\n    					<p>{{contacto.telefono}}</p>\n    				</ion-col>\n    				<ion-col col-1>\n    				</ion-col>\n 				</ion-row>\n\n  			</ion-card-content>\n\n    </ion-card>\n\n\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\lista\lista.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__services_agregar_prospecto_agregar_prospecto_service__["a" /* AgregarProspectoService */],
@@ -1138,10 +1664,9 @@ var AgregarProspectoService = (function () {
     };
     AgregarProspectoService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
     ], AgregarProspectoService);
     return AgregarProspectoService;
-    var _a;
 }());
 
 //# sourceMappingURL=agregar-prospecto.service.js.map
@@ -1444,7 +1969,7 @@ var ProfesionesPage = (function () {
     };
     ProfesionesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profesiones',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/profesiones/profesiones.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Profesiones</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <br>\n  <ion-list>\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n    <button ion-item *ngFor="let item of items" icon-start\n      (click)=irACrearPage(item) >\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{ item.title }}\n    </button>\n  </ion-list>\n</ion-content>\n\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/profesiones/profesiones.html"*/
+            selector: 'page-profesiones',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\profesiones\profesiones.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Profesiones</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <br>\n  <ion-list>\n  	<ion-list-header>¿A quien conoces que?</ion-list-header>\n    <button ion-item *ngFor="let item of items" icon-start\n      (click)=irACrearPage(item) >\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{ item.title }}\n    </button>\n  </ion-list>\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\profesiones\profesiones.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], ProfesionesPage);
@@ -1531,7 +2056,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Acceso</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding><br><br><br><br><br><br>\n    <ion-list>\n        <form>\n            <ion-item href="#">\n                <ion-label floating></ion-label>\n                <ion-input placeholder="Email" type="text" autocapitalize="off" required\n                name="email" [(ngModel)]="user.email" ></ion-input>\n            </ion-item>\n\n            <ion-item href="#">\n                <ion-label floating></ion-label>\n                <ion-input placeholder="Contraseña" type="password" required\n                name="password" [(ngModel)]="user.password" ></ion-input>\n            </ion-item>\n<br><br>\n            <div>\n                <button type="submit" ion-button (click)="fnLogin()"\n                block color="primary" large full>Iniciar Sesión</button>\n\n                <button type="submit" ion-button (click)="fnRegister()"\n                block color="secondary" large full>Registrarse</button>\n            </div>\n        </form>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>Acceso</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding><br><br><br><br><br><br>\n\n    <ion-list>\n\n        <form>\n\n            <ion-item href="#">\n\n                <ion-label floating></ion-label>\n\n                <ion-input placeholder="Email" type="text" autocapitalize="off" required\n\n                name="email" [(ngModel)]="user.email" ></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item href="#">\n\n                <ion-label floating></ion-label>\n\n                <ion-input placeholder="Contraseña" type="password" required\n\n                name="password" [(ngModel)]="user.password" ></ion-input>\n\n            </ion-item>\n\n<br><br>\n\n            <div>\n\n                <button type="submit" ion-button (click)="fnLogin()"\n\n                block color="primary" large full>Iniciar Sesión</button>\n\n\n\n                <button type="submit" ion-button (click)="fnRegister()"\n\n                block color="secondary" large full>Registrarse</button>\n\n            </div>\n\n        </form>\n\n    </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -1703,7 +2228,7 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/oscardary/Documents/proyectos/listaprospectos/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/oscardary/Documents/proyectos/listaprospectos/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"F:\EMPRESA TECNOLOGIA\DESARROLLO WEB\Mis Negocios de Tecnologia\ABC GIT Clones\lista-prospectos-networkmarketing\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
